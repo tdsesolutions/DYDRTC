@@ -44,29 +44,35 @@ const leadership = [
     name: "Tamsyn Butler",
     title: "Executive Director",
     image: "/images/leadership/TamsynButler.jpeg",
-    bio: `Tamsyn Butler is the Executive Director of Defining Your Destiny Youth Center, bringing over a decade of leadership experience in residential child care and mental health services. She holds a Master's degree in Social Work and is a Licensed Child Care Administrator (LCCA) in the state of Texas.
+    quote: "Every child carries within them the potential for greatness. Our role is to provide the safety, support, and belief they need to discover it.",
+    bio: `Tamsyn Butler serves as the Executive Director of Defining Your Destiny Youth Center, bringing more than a decade of distinguished leadership experience in residential child care and mental health services. A Licensed Child Care Administrator (LCCA) in the state of Texas, she holds a Master's degree in Social Work and has dedicated her career to advancing the quality of care for vulnerable youth.
 
-Throughout her career, Tamsyn has been dedicated to creating therapeutic environments where young people can heal from trauma and develop the skills needed for successful adulthood. She has extensive experience in program development, staff training, and regulatory compliance, ensuring that every aspect of care meets the highest professional standards.
+Throughout her professional journey, Tamsyn has developed deep expertise in creating therapeutic environments where young people can heal from trauma and acquire the essential skills needed for successful adulthood. Her comprehensive background spans program development, staff training and mentorship, regulatory compliance, and organizational leadership. She approaches each aspect of her work with an unwavering commitment to excellence, ensuring that every element of care meets the highest professional standards.
 
-Under Tamsyn's leadership, Defining Your Destiny Youth Center has grown into a respected provider of trauma-informed residential treatment, known for its commitment to individualized care and family partnership. She works closely with clinical teams, families, and community partners to ensure that each young person receives comprehensive support tailored to their unique needs.
+Under Tamsyn's visionary leadership, Defining Your Destiny Youth Center has evolved into a respected provider of trauma-informed residential treatment, recognized for its dedication to individualized care and meaningful family partnership. She maintains close collaboration with clinical teams, families, and community partners to ensure that each young person receives comprehensive, tailored support that addresses their unique circumstances and aspirations.
 
-Tamsyn is passionate about advocating for children and adolescents with emotional and behavioral challenges, working to ensure they have access to the resources and support necessary to reach their full potential. Her approach combines clinical expertise with genuine compassion, creating a culture where staff and residents alike feel valued and empowered.
+Tamsyn is a passionate advocate for children and adolescents facing emotional and behavioral challenges. She works tirelessly to ensure these young people have access to the resources, support, and opportunities necessary to reach their full potential. Her leadership approach seamlessly integrates clinical expertise with genuine compassion, fostering an organizational culture where both staff and residents feel genuinely valued, respected, and empowered.
 
-Tamsyn's lifelong commitment to serving at-risk youth stems from a deep belief that every child deserves the opportunity to heal, grow, and discover their own path to success. She considers it a profound privilege to lead an organization dedicated to helping young people define their destinies and build futures filled with hope, resilience, and possibility. Serving as part of the leadership team at Defining Your Destiny Youth Center is not just her profession—it is her calling, and she is grateful every day for the opportunity to make a meaningful difference in the lives of children and families.`
+Tamsyn's commitment to serving at-risk youth was sparked early in her life by witnessing the transformative power of stable, supportive relationships in the lives of young people facing adversity. This foundational experience shaped her understanding that every child, regardless of their past challenges, possesses inherent worth and unlimited potential. She carries this conviction into her work each day, believing passionately that every young person deserves the opportunity to heal emotionally, grow behaviorally, thrive academically, and develop socially. She considers it both a profound responsibility and an extraordinary gift to lead an organization dedicated to helping children and families build futures filled with hope, dignity, and possibility.
+
+Serving as Executive Director of Defining Your Destiny Youth Center represents the fulfillment of Tamsyn's lifelong calling to make a meaningful difference in the lives of vulnerable children. She is deeply grateful for the trust placed in her by the families who entrust their children to their care, the dedicated professionals who share their mission, and the community partners who support their work. Every day, she is inspired by the resilience of the young people they serve and remains steadfastly committed to ensuring that Defining Your Destiny Youth Center continues to be a place where hope is renewed, healing begins, and futures are defined by possibility rather than circumstance.`
   },
   {
     name: "Damien Landrum",
     title: "Clinical Director",
     image: "/images/leadership/Damien.Landrum.png",
-    bio: `Damien Landrum serves as the Clinical Director of Defining Your Destiny Youth Center, overseeing all therapeutic services and clinical operations. He is a Licensed Professional Counselor (LPC) with specialized training in trauma-informed care, cognitive behavioral therapy, and adolescent mental health.
+    quote: "Healing happens when young people discover their own strength. Our job is to walk beside them until they see what we see.",
+    bio: `Damien Landrum serves as the Clinical Director of Defining Your Destiny Youth Center, where he provides strategic oversight of all therapeutic services and clinical operations. A Licensed Professional Counselor (LPC), Damien brings specialized expertise in trauma-informed care, cognitive behavioral therapy, and adolescent mental health, developed through years of dedicated clinical practice and continuous professional development.
 
-With a Master's degree in Clinical Psychology and years of experience in residential treatment settings, Damien brings deep expertise in developing and implementing evidence-based therapeutic interventions. He leads a team of dedicated therapists and mental health professionals, ensuring that every resident receives individualized, compassionate care that addresses their unique emotional and behavioral needs.
+Damien holds a Master's degree in Clinical Psychology and has accumulated extensive experience in residential treatment settings, developing particular expertise in designing and implementing evidence-based therapeutic interventions. He leads a dedicated team of therapists and mental health professionals with a focus on ensuring that every resident receives individualized, compassionate care that thoughtfully addresses their unique emotional and behavioral needs.
 
-Damien is committed to creating a therapeutic culture that recognizes the impact of trauma on development and behavior. He has been instrumental in shaping the organization's trauma-informed approach, training staff in best practices for supporting young people who have experienced adversity. His clinical leadership ensures that treatment plans are not only effective but also delivered with empathy and respect for each individual's dignity.
+Committed to fostering a therapeutic culture that fully recognizes the profound impact of trauma on development and behavior, Damien has played an instrumental role in shaping the organization's trauma-informed approach. He has developed and implemented comprehensive staff training programs in best practices for supporting young people who have experienced adversity, ensuring that clinical care is delivered with both professional excellence and deep empathy. His clinical leadership ensures that treatment plans achieve therapeutic effectiveness while honoring the inherent dignity of each individual.
 
-In addition to his administrative responsibilities, Damien maintains an active role in clinical supervision and program development. He collaborates with families, schools, and community partners to create comprehensive support networks that extend beyond the residential setting. His goal is to ensure that every young person leaves the program with the emotional tools and coping strategies needed for long-term success.
+Beyond his administrative responsibilities, Damien maintains an active, hands-on role in clinical supervision and ongoing program development. He works collaboratively with families, educational institutions, and community partners to create comprehensive support networks that extend well beyond the residential setting. His ultimate goal is to ensure that every young person who completes their program leaves equipped with the emotional tools, coping strategies, and self-awareness necessary for sustained long-term success.
 
-Damien's dedication to helping children and adolescents heal from trauma and discover their inner strength has been the driving force throughout his career. He believes deeply in the resilience of young people and the transformative power of compassionate, professional care. Being part of the Defining Your Destiny Youth Center leadership team allows him to fulfill his passion for guiding young people toward healing, self-discovery, and the confidence to shape their own futures. He is honored to serve an organization that shares his commitment to empowering every child to define their destiny.`
+Damien's path to clinical leadership was shaped by early experiences volunteering with youth mentoring programs, where he witnessed firsthand the remarkable capacity for resilience within young people who had faced significant challenges. These experiences taught him that beneath behavioral struggles and emotional pain, there exists in every child a wellspring of strength waiting to be discovered. This understanding has guided his entire career, informing his belief that effective therapy must go beyond symptom management to help young people recognize their own capabilities, develop healthy self-concepts, and envision futures defined by their own choices rather than their past experiences.
+
+Damien considers it a profound honor to serve as Clinical Director of Defining Your Destiny Youth Center. He is deeply grateful for the opportunity to lead a clinical team that shares his commitment to excellence and compassion, to partner with families navigating difficult circumstances, and to witness daily the remarkable transformations that occur when young people are given the support they need to heal emotionally, develop behaviorally, succeed academically, and grow socially. He remains steadfastly committed to ensuring that every child who comes through their doors discovers their own capacity for resilience, healing, and self-definition.`
   },
 ];
 
@@ -303,34 +309,47 @@ export default function AboutPage() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
-                Our Leadership Team
+                Executive Leadership
               </h2>
               <p className="text-lg text-[#4A4A4A] max-w-2xl mx-auto">
-                Experienced professionals dedicated to excellence in residential treatment and the 
-                well-being of every young person we serve.
+                Dedicated professionals guiding our mission to transform lives and build futures.
               </p>
             </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="space-y-16 max-w-5xl mx-auto">
             {leadership.map((person, index) => (
-              <FadeIn key={person.name} delay={index * 0.1}>
+              <FadeIn key={person.name} delay={index * 0.15}>
                 <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                  <div className="aspect-square relative bg-[#E8E8E8]">
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-semibold text-[#17375E] text-xl mb-1">{person.name}</h3>
-                    <p className="text-sm text-[#1F5D3A] font-medium mb-4">{person.title}</p>
-                    <div className="text-sm text-[#4A4A4A] leading-relaxed space-y-3">
-                      {person.bio.split('\n\n').map((paragraph, i) => (
-                        <p key={i}>{paragraph}</p>
-                      ))}
+                  <div className="grid lg:grid-cols-3 gap-0">
+                    {/* Image Column */}
+                    <div className="aspect-[4/5] lg:aspect-auto relative bg-[#E8E8E8]">
+                      <Image
+                        src={person.image}
+                        alt={person.name}
+                        fill
+                        className="object-cover object-top"
+                      />
+                    </div>
+                    
+                    {/* Content Column */}
+                    <div className="lg:col-span-2 p-8 lg:p-10">
+                      <div className="mb-6">
+                        <h3 className="font-semibold text-[#17375E] text-2xl mb-1">{person.name}</h3>
+                        <p className="text-[#1F5D3A] font-medium">{person.title}</p>
+                      </div>
+                      
+                      {/* Quote */}
+                      <blockquote className="border-l-4 border-[#C6A15B] pl-6 mb-6 italic text-[#4A4A4A] text-lg">
+                        &ldquo;{person.quote}&rdquo;
+                      </blockquote>
+                      
+                      {/* Bio */}
+                      <div className="text-[#4A4A4A] leading-relaxed space-y-4">
+                        {person.bio.split('\n\n').map((paragraph, i) => (
+                          <p key={i}>{paragraph}</p>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
