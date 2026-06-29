@@ -323,13 +323,16 @@ export default function AboutPage() {
                 <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
                   <div className="grid lg:grid-cols-3 gap-0">
                     {/* Image Column */}
-                    <div className="aspect-[4/5] lg:aspect-auto relative bg-[#E8E8E8]">
-                      <Image
-                        src={person.image}
-                        alt={person.name}
-                        fill
-                        className="object-cover object-top"
-                      />
+                    <div className="relative bg-[#F5F5F5] flex items-center justify-center p-8 lg:p-0">
+                      <div className="relative w-full max-w-[280px] aspect-[3/4] lg:aspect-[4/5] lg:max-w-none lg:w-full lg:h-full">
+                        <Image
+                          src={person.image}
+                          alt={person.name}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 1024px) 280px, 33vw"
+                        />
+                      </div>
                     </div>
                     
                     {/* Content Column */}
