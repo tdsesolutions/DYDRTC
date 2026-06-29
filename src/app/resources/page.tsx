@@ -89,7 +89,7 @@ export default function ResourcesPage() {
                 How Can We Help?
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed">
-                Whether you're a family considering residential treatment for your child, 
+                Whether you are a family considering residential treatment for your child, 
                 a professional making a referral, or seeking to understand more about our 
                 services, these resources are designed to provide the information you need.
               </p>

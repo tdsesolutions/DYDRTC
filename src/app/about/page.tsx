@@ -195,7 +195,7 @@ export default function AboutPage() {
             {[
               {
                 title: "Trauma-Informed Care",
-                description: "We recognize that trauma shapes behavior and development. Every interaction, intervention, and environment is designed with an understanding of trauma's impact and the pathways to healing.",
+                description: "We recognize that trauma shapes behavior and development. Every interaction, intervention, and environment is designed with an understanding of trauma&apos;s impact and the pathways to healing.",
               },
               {
                 title: "Individualized Treatment",
@@ -313,7 +313,7 @@ export default function AboutPage() {
               </h2>
               <p className="text-lg text-white/70 leading-relaxed mb-6">
                 [Video content placeholder - Future video message from executive leadership about 
-                the organization's mission, values, and commitment to the families we serve.]
+                the organization&apos;s mission, values, and commitment to the families we serve.]
               </p>
               <Link
                 href="/contact"

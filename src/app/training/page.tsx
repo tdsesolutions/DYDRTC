@@ -112,7 +112,7 @@ export default function TrainingPage() {
                     challenges of residential child care administration.
                   </p>
                   <p>
-                    Whether you're a new administrator seeking foundational knowledge or an 
+                    Whether you are a new administrator seeking foundational knowledge or an 
                     experienced director looking to enhance your leadership skills, our 
                     training programs offer valuable insights and professional growth opportunities.
                   </p>
@@ -252,7 +252,7 @@ export default function TrainingPage() {
                   Why Choose Our Training
                 </h2>
                 <p className="text-lg text-[#4A4A4A] leading-relaxed mb-6">
-                  Our training programs stand apart because they're developed and delivered 
+                  Our training programs stand apart because they are developed and delivered 
                   by professionals with real-world experience in residential child care leadership.
                 </p>
                 <div className="space-y-4">

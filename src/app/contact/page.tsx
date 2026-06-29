@@ -31,7 +31,7 @@ export default function ContactPage() {
                 Contact Us
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-                We're here to help.
+                We&apos;re here to help.
               </h1>
               <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
                 Reach out with questions, referrals, or to learn more about our programs. 
@@ -53,8 +53,8 @@ export default function ContactPage() {
                   Get in Touch
                 </h2>
                 <p className="text-lg text-[#4A4A4A] leading-relaxed mb-8">
-                  Whether you're a family seeking information, a professional making a referral, 
-                  or simply have questions about our programs, we're here to help.
+                  Whether you&apos;re a family seeking information, a professional making a referral, 
+                  or simply have questions about our programs, we&apos;re here to help.
                 </p>
 
                 <div className="space-y-6">
@@ -261,7 +261,7 @@ export default function ContactPage() {
               Ready to Take the Next Step?
             </h2>
             <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              If you're considering our programs for yourself or someone you care about, 
+              If you&apos;re considering our programs for yourself or someone you care about, 
               our admissions team is ready to help.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

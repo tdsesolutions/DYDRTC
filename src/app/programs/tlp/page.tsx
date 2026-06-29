@@ -256,7 +256,7 @@ export default function TransitionAftercarePage() {
                   Aftercare Support
                 </h2>
                 <p className="text-lg text-[#4A4A4A] leading-relaxed mb-6">
-                  Our commitment to residents doesn't end at discharge. We provide ongoing 
+                  Our commitment to residents does not end at discharge. We provide ongoing 
                   support to ensure continued success.
                 </p>
                 <div className="space-y-4">

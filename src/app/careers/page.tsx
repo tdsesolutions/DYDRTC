@@ -161,7 +161,7 @@ export default function CareersPage() {
                     </h3>
                     <p className="text-[#4A4A4A]">
                       We believe the best outcomes come from collaborative efforts across disciplines. 
-                      Every team member's contribution is valued.
+                      Every team member&apos;s contribution is valued.
                     </p>
                   </div>
                   <div>
@@ -180,7 +180,7 @@ export default function CareersPage() {
                       Growth & Learning
                     </h3>
                     <p className="text-[#4A4A4A]">
-                      We invest in our staff's professional development, providing ongoing training 
+                      We invest in our staff&apos;s professional development, providing ongoing training 
                       and opportunities for advancement.
                     </p>
                   </div>
@@ -235,7 +235,7 @@ export default function CareersPage() {
                 Training & Professional Development
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed mb-8">
-                We believe that investing in our staff's growth directly benefits the individuals 
+                We believe that investing in our staff&apos;s growth directly benefits the individuals 
                 we serve. Our comprehensive training and development programs ensure that every 
                 team member has the skills and knowledge needed to excel.
               </p>
@@ -297,7 +297,7 @@ export default function CareersPage() {
                 Benefits & Perks
               </h2>
               <p className="text-lg text-[#4A4A4A] max-w-2xl mx-auto">
-                We offer comprehensive benefits to support our team's well-being and professional growth.
+                We offer comprehensive benefits to support our team&apos;s well-being and professional growth.
               </p>
             </div>
           </FadeIn>
@@ -325,7 +325,7 @@ export default function CareersPage() {
                   Careers Inquiry
                 </h2>
                 <p className="text-lg text-white/70">
-                  Interested in joining our team? Fill out the form below and we'll be in touch 
+                  Interested in joining our team? Fill out the form below and we&apos;ll be in touch 
                   about current and future opportunities.
                 </p>
               </div>

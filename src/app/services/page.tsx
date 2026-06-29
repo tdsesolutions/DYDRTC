@@ -76,7 +76,7 @@ export default function ServicesPage() {
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed">
                 At Defining Your Destiny Youth Center, we believe that effective treatment requires a holistic approach. 
-                Our comprehensive service model ensures that every aspect of a resident's well-being is 
+                Our comprehensive service model ensures that every aspect of a resident&apos;s well-being is 
                 addressed through coordinated, individualized care.
               </p>
             </div>
