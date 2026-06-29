@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown, Heart, Shield, Users, BookOpen, Home as HomeIcon, GraduationCap } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
@@ -61,9 +62,17 @@ export default function Home() {
         <section className="relative min-h-screen flex items-center overflow-hidden">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#1F5D3A]/95 via-[#17375E]/90 to-[#17375E]/85" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.15),_transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_rgba(31,93,58,0.2),_transparent_40%)]" />
+            <Image
+              src="/images/hero-home-family-2026.webp"
+              alt="Defining Your Destiny Youth Center"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1F5D3A]/85 via-[#17375E]/80 to-[#17375E]/75" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.1),_transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_rgba(31,93,58,0.15),_transparent_40%)]" />
           </div>
 
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 py-32 lg:py-40">
