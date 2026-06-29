@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "What documents are needed for admission?",
-    answer: "Required documentation typically includes: birth certificate, social security card, insurance information, medical records, current medications, educational records, legal/custody documentation, psychological evaluations, and any relevant court orders. Our admissions team provides a complete checklist.",
+    answer: "Required documentation typically includes: birth certificate, social security card, insurance information, relevant records, current medications, educational records, legal/custody documentation, evaluations, and any relevant court orders. Our admissions team provides a complete checklist.",
   },
   {
     question: "Do you accept emergency placements?",
@@ -48,11 +48,11 @@ export default function AdmissionsPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#1E1B14]">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#17375E]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="max-w-3xl">
-              <p className="text-[#5A7A7A] text-sm font-medium tracking-widest uppercase mb-4">
+              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
                 Admissions
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
@@ -68,11 +68,11 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Admissions Overview */}
-      <section className="py-24 lg:py-32 bg-[#FAF9F7]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-6">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
                 Our Admissions Philosophy
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed">
@@ -87,15 +87,15 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Who We Serve */}
-      <section className="py-24 lg:py-32 bg-[#F5F3EF]">
+      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-4">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
                 Who We Serve
               </h2>
               <p className="text-lg text-[#4A4A4A] max-w-2xl mx-auto">
-                We work with children, adolescents, and young adults who have complex needs 
+                We work with children and adolescents who have emotional, behavioral, and mental health needs 
                 requiring specialized residential care.
               </p>
             </div>
@@ -104,21 +104,21 @@ export default function AdmissionsPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Primary Medical Needs",
-                desc: "Youth ages 5-17 with complex medical conditions requiring skilled nursing oversight and behavioral support.",
+                title: "Residential Treatment",
+                desc: "Youth ages 5-17 with emotional and behavioral challenges requiring therapeutic residential care.",
               },
               {
-                title: "Supervised Independent Living",
-                desc: "Young adults ages 18-21 who are building independence skills in a supportive, structured environment.",
+                title: "Life Skills Development",
+                desc: "Integrated programming for all residents focused on building daily living competencies.",
               },
               {
-                title: "Transitional Living",
-                desc: "Young adults preparing for complete independence through intensive life skills training and mentorship.",
+                title: "Transition & Aftercare",
+                desc: "Comprehensive discharge planning and aftercare support for sustained success.",
               },
             ].map((item, index) => (
               <FadeIn key={item.title} delay={index * 0.15}>
-                <div className="bg-white rounded-xl p-8 border border-[#E8E2D9] h-full">
-                  <h3 className="text-xl font-semibold text-[#1E1B14] mb-3">{item.title}</h3>
+                <div className="bg-white rounded-xl p-8 border border-[#E8E8E8] h-full">
+                  <h3 className="text-xl font-semibold text-[#17375E] mb-3">{item.title}</h3>
                   <p className="text-[#4A4A4A]">{item.desc}</p>
                 </div>
               </FadeIn>
@@ -128,7 +128,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Process Steps */}
-      <section className="py-24 lg:py-32 bg-[#1E1B14]">
+      <section className="py-24 lg:py-32 bg-[#17375E]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="text-center mb-16">
@@ -153,7 +153,7 @@ export default function AdmissionsPage() {
                 icon: ClipboardList,
                 step: "2",
                 title: "Assessment",
-                desc: "Comprehensive review of medical, behavioral, and educational needs.",
+                desc: "Comprehensive review of emotional, behavioral, and educational needs.",
               },
               {
                 icon: FileCheck,
@@ -170,7 +170,7 @@ export default function AdmissionsPage() {
             ].map((item, index) => (
               <FadeIn key={item.title} delay={index * 0.1}>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 text-center h-full">
-                  <div className="w-12 h-12 rounded-full bg-[#5A7A7A] text-white flex items-center justify-center font-bold mx-auto mb-4">
+                  <div className="w-12 h-12 rounded-full bg-[#1F5D3A] text-white flex items-center justify-center font-bold mx-auto mb-4">
                     {item.step}
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
@@ -183,11 +183,11 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Required Documentation */}
-      <section className="py-24 lg:py-32 bg-[#FAF9F7]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <FadeIn>
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-6">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
                 Required Documentation
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed mb-8">
@@ -199,7 +199,7 @@ export default function AdmissionsPage() {
                   "Birth certificate or proof of age",
                   "Social security card",
                   "Insurance information and cards",
-                  "Medical records and health history",
+                  "Relevant records and history",
                   "Current medication list",
                   "Educational records and IEP if applicable",
                   "Psychological or psychiatric evaluations",
@@ -208,7 +208,7 @@ export default function AdmissionsPage() {
                   "Immunization records",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3 text-[#4A4A4A]">
-                    <FileCheck className="w-5 h-5 text-[#5A7A7A]" />
+                    <FileCheck className="w-5 h-5 text-[#1F5D3A]" />
                     {item}
                   </div>
                 ))}
@@ -216,8 +216,8 @@ export default function AdmissionsPage() {
             </FadeIn>
 
             <FadeIn direction="right">
-              <div className="bg-[#F5F3EF] rounded-2xl p-8 lg:p-12">
-                <h3 className="text-2xl font-semibold text-[#1E1B14] mb-6">
+              <div className="bg-[#F5F5F5] rounded-2xl p-8 lg:p-12">
+                <h3 className="text-2xl font-semibold text-[#17375E] mb-6">
                   Intake and Assessment
                 </h3>
                 <p className="text-[#4A4A4A] mb-6">
@@ -225,7 +225,7 @@ export default function AdmissionsPage() {
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Medical assessment by nursing staff",
+                    "Clinical assessment by therapeutic staff",
                     "Psychosocial evaluation",
                     "Behavioral observation and assessment",
                     "Educational needs evaluation",
@@ -233,7 +233,7 @@ export default function AdmissionsPage() {
                     "Initial treatment plan development",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[#4A4A4A]">
-                      <Clock className="w-5 h-5 text-[#5A7A7A] mt-0.5 flex-shrink-0" />
+                      <Clock className="w-5 h-5 text-[#1F5D3A] mt-0.5 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -245,12 +245,12 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Family Communication */}
-      <section className="py-24 lg:py-32 bg-[#F5F3EF]">
+      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="max-w-3xl mx-auto">
             <FadeIn>
               <div className="text-center mb-12">
-                <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-4">
+                <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
                   Family Communication During Admission
                 </h2>
                 <p className="text-lg text-[#4A4A4A]">
@@ -280,8 +280,8 @@ export default function AdmissionsPage() {
                       desc: "Regular updates, scheduled calls, and open lines of communication throughout the stay.",
                     },
                   ].map((item) => (
-                    <div key={item.title} className="border-b border-[#E8E2D9] pb-6 last:border-0 last:pb-0">
-                      <h3 className="font-semibold text-[#1E1B14] mb-1">{item.title}</h3>
+                    <div key={item.title} className="border-b border-[#E8E8E8] pb-6 last:border-0 last:pb-0">
+                      <h3 className="font-semibold text-[#17375E] mb-1">{item.title}</h3>
                       <p className="text-[#4A4A4A]">{item.desc}</p>
                     </div>
                   ))}
@@ -293,11 +293,11 @@ export default function AdmissionsPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 lg:py-32 bg-[#FAF9F7]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-4">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
                 Admissions FAQs
               </h2>
               <p className="text-lg text-[#4A4A4A]">
@@ -309,16 +309,16 @@ export default function AdmissionsPage() {
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <FadeIn key={index} delay={index * 0.05}>
-                <div className="bg-white rounded-xl overflow-hidden">
+                <div className="bg-[#F5F5F5] rounded-xl overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="w-full flex items-center justify-between p-6 text-left hover:bg-[#FAF9F7] transition-colors"
+                    className="w-full flex items-center justify-between p-6 text-left hover:bg-[#E8E8E8] transition-colors"
                   >
-                    <span className="font-semibold text-[#1E1B14] pr-8">{faq.question}</span>
+                    <span className="font-semibold text-[#17375E] pr-8">{faq.question}</span>
                     {openFaq === index ? (
-                      <ChevronUp className="w-5 h-5 text-[#5A7A7A] flex-shrink-0" />
+                      <ChevronUp className="w-5 h-5 text-[#1F5D3A] flex-shrink-0" />
                     ) : (
-                      <ChevronDown className="w-5 h-5 text-[#5A7A7A] flex-shrink-0" />
+                      <ChevronDown className="w-5 h-5 text-[#1F5D3A] flex-shrink-0" />
                     )}
                   </button>
                   {openFaq === index && (
@@ -334,7 +334,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Admissions Form */}
-      <section className="py-24 lg:py-32 bg-[#1E1B14]">
+      <section className="py-24 lg:py-32 bg-[#17375E]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="max-w-2xl mx-auto">
             <FadeIn>
@@ -359,7 +359,7 @@ export default function AdmissionsPage() {
                       type="text"
                       id="name"
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#5A7A7A]"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
                       placeholder="Full name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -375,7 +375,7 @@ export default function AdmissionsPage() {
                         type="email"
                         id="email"
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#5A7A7A]"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
                         placeholder="email@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -389,7 +389,7 @@ export default function AdmissionsPage() {
                         type="tel"
                         id="phone"
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#5A7A7A]"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
                         placeholder="(XXX) XXX-XXXX"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -404,15 +404,15 @@ export default function AdmissionsPage() {
                     <select
                       id="inquiryType"
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-[#5A7A7A]"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-[#C6A15B]"
                       value={formData.inquiryType}
                       onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
                     >
-                      <option value="" className="text-[#1E1B14]">Select inquiry type</option>
-                      <option value="family" className="text-[#1E1B14]">Family seeking placement</option>
-                      <option value="professional" className="text-[#1E1B14]">Professional referral</option>
-                      <option value="cps" className="text-[#1E1B14]">CPS/agency referral</option>
-                      <option value="other" className="text-[#1E1B14]">Other</option>
+                      <option value="" className="text-[#17375E]">Select inquiry type</option>
+                      <option value="family" className="text-[#17375E]">Family seeking placement</option>
+                      <option value="professional" className="text-[#17375E]">Professional referral</option>
+                      <option value="cps" className="text-[#17375E]">CPS/agency referral</option>
+                      <option value="other" className="text-[#17375E]">Other</option>
                     </select>
                   </div>
 
@@ -423,7 +423,7 @@ export default function AdmissionsPage() {
                     <textarea
                       id="message"
                       rows={4}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#5A7A7A] resize-none"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B] resize-none"
                       placeholder="Tell us about your situation or questions..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -435,19 +435,19 @@ export default function AdmissionsPage() {
                       type="checkbox"
                       id="consent"
                       required
-                      className="mt-1 w-4 h-4 rounded border-white/20 bg-white/10 text-[#5A7A7A] focus:ring-[#5A7A7A]"
+                      className="mt-1 w-4 h-4 rounded border-white/20 bg-white/10 text-[#C6A15B] focus:ring-[#C6A15B]"
                       checked={formData.consent}
                       onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
                     />
                     <label htmlFor="consent" className="text-sm text-white/60">
-                      I consent to being contacted by A Place for Me RTC regarding this inquiry. 
+                      I consent to being contacted by Defining Your Destiny Youth Center regarding this inquiry. 
                       I understand this form is not for emergencies.
                     </label>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#1E1B14] font-medium rounded-full hover:bg-[#E8E2D9] transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-white hover:text-[#17375E] transition-colors"
                   >
                     Submit Inquiry <ArrowRight className="w-4 h-4" />
                   </button>

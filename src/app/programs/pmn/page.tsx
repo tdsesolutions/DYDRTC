@@ -7,12 +7,12 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "What types of medical needs can you accommodate?",
-    answer: "Our Primary Medical Needs program is designed to support youth with a range of complex medical conditions including, but not limited to, diabetes management, seizure disorders, feeding tube dependence, mobility impairments, respiratory support needs, and other conditions requiring skilled nursing oversight. We conduct individualized assessments to ensure we can safely meet each resident's specific medical needs.",
+    question: "What types of emotional and behavioral needs can you accommodate?",
+    answer: "Our Residential Treatment program is designed to support youth with a range of emotional and behavioral challenges including mood disorders, anxiety, trauma-related behaviors, behavioral disorders, and difficulties with emotional regulation. We conduct individualized assessments to ensure we can meet each resident's specific needs.",
   },
   {
     question: "What is the staff-to-resident ratio?",
-    answer: "We maintain appropriate staffing ratios based on the acuity needs of our residents. Our team includes registered nurses, licensed vocational nurses, direct care professionals, and behavioral specialists. Specific ratios are determined by individual care plans and regulatory requirements.",
+    answer: "We maintain appropriate staffing ratios based on the needs of our residents. Our team includes licensed therapists, case managers, direct care professionals, and behavioral specialists. Specific ratios are determined by individual treatment plans and regulatory requirements.",
   },
   {
     question: "How do you handle behavioral challenges?",
@@ -28,25 +28,25 @@ const faqs = [
   },
 ];
 
-export default function PMNPage() {
+export default function ResidentialTreatmentPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#1E1B14]">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#17375E]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="max-w-3xl">
-              <p className="text-[#5A7A7A] text-sm font-medium tracking-widest uppercase mb-4">
+              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
                 Featured Program
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-                Primary Medical Needs Residential Treatment
+                Residential Treatment Center
               </h1>
               <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
-                Specialized, comprehensive care for youth with complex medical, behavioral, 
-                and developmental needs in a safe, nurturing environment.
+                Comprehensive, trauma-informed residential treatment for children and adolescents 
+                with emotional, behavioral, and mental health needs.
               </p>
             </div>
           </FadeIn>
@@ -54,37 +54,38 @@ export default function PMNPage() {
       </section>
 
       {/* Program Overview */}
-      <section className="py-24 lg:py-32 bg-[#FAF9F7]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn direction="left">
-              <div className="aspect-[4/3] bg-[#E8E2D9] rounded-2xl overflow-hidden">
+              <div className="aspect-[4/3] bg-[#F5F5F5] rounded-2xl overflow-hidden">
                 <div className="w-full h-full flex items-center justify-center text-[#9A9A9A]">
-                  [PMN Program Image]
+                  [Residential Treatment Image]
                 </div>
               </div>
             </FadeIn>
             
             <div>
               <FadeIn direction="right">
-                <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-6">
-                  Comprehensive Care for Complex Needs
+                <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
+                  Comprehensive Therapeutic Care
                 </h2>
                 <div className="space-y-4 text-[#4A4A4A] leading-relaxed">
                   <p>
-                    Our Primary Medical Needs Residential Treatment Center provides 24-hour, 
-                    specialized care for children and adolescents who require medical oversight 
-                    alongside behavioral and therapeutic support.
+                    Our Residential Treatment Center provides 24-hour, comprehensive care for 
+                    children and adolescents who require therapeutic support for emotional, 
+                    behavioral, and mental health challenges.
                   </p>
                   <p>
-                    We understand that medical complexity often coexists with behavioral and 
-                    emotional challenges. Our integrated approach addresses the whole person—medical, 
-                    behavioral, educational, and emotional needs—in a coordinated, compassionate manner.
+                    We understand that emotional and behavioral difficulties often stem from 
+                    trauma and adverse experiences. Our trauma-informed approach addresses the 
+                    whole person—emotional, behavioral, educational, and social needs—in a 
+                    coordinated, compassionate manner.
                   </p>
                   <p>
-                    Each resident receives an individualized care plan developed by our multidisciplinary 
-                    team, ensuring that their unique combination of needs is understood, supported, 
-                    and addressed with dignity and expertise.
+                    Each resident receives an individualized treatment plan developed by our 
+                    multidisciplinary team, ensuring that their unique combination of needs is 
+                    understood, supported, and addressed with dignity and expertise.
                   </p>
                 </div>
               </FadeIn>
@@ -94,15 +95,15 @@ export default function PMNPage() {
       </section>
 
       {/* Who We Support */}
-      <section className="py-24 lg:py-32 bg-[#F5F3EF]">
+      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-4">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
                 Who This Program Supports
               </h2>
               <p className="text-lg text-[#4A4A4A] max-w-2xl mx-auto">
-                Youth ages 5-17 with complex needs requiring specialized residential care.
+                Youth ages 5-17 with emotional, behavioral, and mental health needs requiring residential care.
               </p>
             </div>
           </FadeIn>
@@ -110,12 +111,12 @@ export default function PMNPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "Medical Complexity",
-                items: ["Chronic medical conditions", "Medication management needs", "Specialized dietary requirements", "Mobility considerations"],
+                title: "Emotional Needs",
+                items: ["Mood disorders", "Anxiety disorders", "Trauma-related symptoms", "Emotional dysregulation"],
               },
               {
                 title: "Behavioral Needs",
-                items: ["Challenging behaviors", "Emotional dysregulation", "Trauma-related behaviors", "Developmental delays"],
+                items: ["Challenging behaviors", "Behavioral disorders", "Social difficulties", "Impulse control issues"],
               },
               {
                 title: "Therapeutic Support",
@@ -123,12 +124,12 @@ export default function PMNPage() {
               },
             ].map((category, index) => (
               <FadeIn key={category.title} delay={index * 0.1}>
-                <div className="bg-white rounded-xl p-8 border border-[#E8E2D9]">
-                  <h3 className="text-xl font-semibold text-[#1E1B14] mb-4">{category.title}</h3>
+                <div className="bg-white rounded-xl p-8 border border-[#E8E8E8]">
+                  <h3 className="text-xl font-semibold text-[#17375E] mb-4">{category.title}</h3>
                   <ul className="space-y-2">
                     {category.items.map((item) => (
                       <li key={item} className="flex items-center gap-2 text-[#4A4A4A]">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#5A7A7A]" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#1F5D3A]" />
                         {item}
                       </li>
                     ))}
@@ -140,29 +141,29 @@ export default function PMNPage() {
         </div>
       </section>
 
-      {/* Medical & Nursing */}
-      <section className="py-24 lg:py-32 bg-[#1E1B14]">
+      {/* Clinical Services */}
+      <section className="py-24 lg:py-32 bg-[#17375E]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <FadeIn>
               <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">
-                Medical and Nursing Oversight
+                Clinical and Therapeutic Services
               </h2>
               <p className="text-lg text-white/70 leading-relaxed mb-8">
-                Our medical team provides comprehensive oversight to ensure the health and safety 
-                of every resident while supporting their overall treatment goals.
+                Our clinical team provides comprehensive therapeutic services to support the 
+                emotional and behavioral well-being of every resident.
               </p>
               <div className="space-y-4">
                 {[
-                  "24/7 nursing availability for medical needs and emergencies",
-                  "Medication administration, monitoring, and management",
-                  "Coordination with primary care physicians and specialists",
-                  "Regular health assessments and monitoring",
-                  "Medical appointment scheduling and transportation",
-                  "Medical care plan development and updates",
+                  "Individual therapy sessions",
+                  "Group therapy and processing",
+                  "Family therapy and engagement",
+                  "Behavioral intervention planning",
+                  "Crisis support and stabilization",
+                  "Case management and coordination",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3 text-white/60">
-                    <Stethoscope className="w-5 h-5 text-[#5A7A7A] mt-0.5 flex-shrink-0" />
+                    <Stethoscope className="w-5 h-5 text-[#C6A15B] mt-0.5 flex-shrink-0" />
                     {item}
                   </div>
                 ))}
@@ -171,13 +172,13 @@ export default function PMNPage() {
 
             <FadeIn direction="right">
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-6">Our Medical Team</h3>
+                <h3 className="text-xl font-semibold text-white mb-6">Our Clinical Team</h3>
                 <div className="space-y-4">
                   {[
-                    { role: "Medical Director", desc: "Oversees all medical care and protocols" },
-                    { role: "Registered Nurses", desc: "Provide skilled nursing care and medication management" },
-                    { role: "Licensed Vocational Nurses", desc: "Support nursing care and resident monitoring" },
-                    { role: "Direct Care Staff", desc: "Trained in medical needs and behavioral support" },
+                    { role: "Clinical Director", desc: "Oversees all clinical services and treatment protocols" },
+                    { role: "Licensed Therapists", desc: "Provide individual, group, and family therapy" },
+                    { role: "Case Managers", desc: "Coordinate care and services for each resident" },
+                    { role: "Direct Care Staff", desc: "Trained in trauma-informed care and behavioral support" },
                   ].map((member) => (
                     <div key={member.role} className="border-b border-white/10 pb-4 last:border-0">
                       <h4 className="font-medium text-white">{member.role}</h4>
@@ -192,12 +193,12 @@ export default function PMNPage() {
       </section>
 
       {/* Treatment Planning */}
-      <section className="py-24 lg:py-32 bg-[#FAF9F7]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="max-w-3xl mx-auto">
             <FadeIn>
               <div className="text-center mb-12">
-                <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-4">
+                <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
                   Individualized Treatment Planning
                 </h2>
                 <p className="text-lg text-[#4A4A4A]">
@@ -207,23 +208,23 @@ export default function PMNPage() {
             </FadeIn>
 
             <FadeIn>
-              <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-sm">
+              <div className="bg-[#F5F5F5] rounded-2xl p-8 lg:p-12 shadow-sm">
                 <div className="space-y-8">
                   {[
                     {
                       step: "1",
                       title: "Comprehensive Assessment",
-                      desc: "Thorough evaluation of medical, behavioral, educational, and psychosocial needs upon admission.",
+                      desc: "Thorough evaluation of emotional, behavioral, educational, and psychosocial needs upon admission.",
                     },
                     {
                       step: "2",
                       title: "Collaborative Planning",
-                      desc: "Treatment team—including medical, nursing, clinical, educational, and family representatives—develops integrated care plan.",
+                      desc: "Treatment team—including clinical, case management, educational, and family representatives—develops integrated care plan.",
                     },
                     {
                       step: "3",
                       title: "Implementation",
-                      desc: "Consistent, coordinated delivery of medical care, therapeutic interventions, and daily living support.",
+                      desc: "Consistent, coordinated delivery of therapeutic interventions, behavioral support, and daily living assistance.",
                     },
                     {
                       step: "4",
@@ -232,11 +233,11 @@ export default function PMNPage() {
                     },
                   ].map((item) => (
                     <div key={item.step} className="flex gap-6">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#5A7A7A] text-white flex items-center justify-center font-bold">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1F5D3A] text-white flex items-center justify-center font-bold">
                         {item.step}
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-[#1E1B14] mb-1">{item.title}</h3>
+                        <h3 className="text-lg font-semibold text-[#17375E] mb-1">{item.title}</h3>
                         <p className="text-[#4A4A4A]">{item.desc}</p>
                       </div>
                     </div>
@@ -249,15 +250,15 @@ export default function PMNPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 lg:py-32 bg-[#F5F3EF]">
+      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-4">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
                 Frequently Asked Questions
               </h2>
               <p className="text-lg text-[#4A4A4A]">
-                Common questions about our Primary Medical Needs program.
+                Common questions about our Residential Treatment program.
               </p>
             </div>
           </FadeIn>
@@ -268,13 +269,13 @@ export default function PMNPage() {
                 <div className="bg-white rounded-xl overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="w-full flex items-center justify-between p-6 text-left hover:bg-[#FAF9F7] transition-colors"
+                    className="w-full flex items-center justify-between p-6 text-left hover:bg-[#F5F5F5] transition-colors"
                   >
-                    <span className="font-semibold text-[#1E1B14] pr-8">{faq.question}</span>
+                    <span className="font-semibold text-[#17375E] pr-8">{faq.question}</span>
                     {openFaq === index ? (
-                      <ChevronUp className="w-5 h-5 text-[#5A7A7A] flex-shrink-0" />
+                      <ChevronUp className="w-5 h-5 text-[#1F5D3A] flex-shrink-0" />
                     ) : (
-                      <ChevronDown className="w-5 h-5 text-[#5A7A7A] flex-shrink-0" />
+                      <ChevronDown className="w-5 h-5 text-[#1F5D3A] flex-shrink-0" />
                     )}
                   </button>
                   {openFaq === index && (
@@ -290,20 +291,20 @@ export default function PMNPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#5A7A7A]">
+      <section className="py-20 bg-[#1F5D3A]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 text-center">
           <FadeIn>
             <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">
               Learn More About Admission
             </h2>
             <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              Contact our admissions team to discuss whether our Primary Medical Needs program 
+              Contact our admissions team to discuss whether our Residential Treatment program 
               is the right fit for your family or client.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/admissions"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#1E1B14] font-medium rounded-full hover:bg-[#E8E2D9] transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-white hover:text-[#17375E] transition-colors"
               >
                 Start a Referral <ArrowRight className="w-4 h-4" />
               </Link>

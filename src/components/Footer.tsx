@@ -9,15 +9,16 @@ const footerLinks = {
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Programs", href: "/programs" },
-    { name: "Resources", href: "/resources" },
     { name: "Admissions", href: "/admissions" },
+    { name: "Resources", href: "/resources" },
     { name: "Careers", href: "/careers" },
+    { name: "Training", href: "/training" },
     { name: "Contact", href: "/contact" },
   ],
   programs: [
-    { name: "Primary Medical Needs RTC", href: "/programs/pmn" },
-    { name: "Supervised Independent Living", href: "/programs/sil" },
-    { name: "Transitional Living Program", href: "/programs/tlp" },
+    { name: "Residential Treatment", href: "/programs/pmn" },
+    { name: "Life Skills Development", href: "/programs/sil" },
+    { name: "Transition & Aftercare", href: "/programs/tlp" },
   ],
   resources: [
     { name: "Family FAQs", href: "/resources" },
@@ -28,7 +29,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1E1B14] text-white">
+    <footer className="bg-[#17375E] text-white">
       {/* CTA Section */}
       <div className="border-b border-white/10">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
@@ -42,7 +43,7 @@ export default function Footer() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/admissions"
-                className="inline-flex items-center px-8 py-4 bg-white text-[#1E1B14] font-medium rounded-full hover:bg-[#E8E2D9] transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-[#1F5D3A] transition-colors"
               >
                 Start a Referral
               </Link>
@@ -63,11 +64,11 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
-              <span className="text-xl font-semibold">A Place for Me RTC</span>
+              <span className="text-xl font-semibold">Defining Your Destiny</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Providing specialized residential treatment and supportive living programs 
-              for children, adolescents, and young adults with complex needs.
+              Providing trauma-informed residential treatment and supportive services 
+              for children and adolescents with emotional, behavioral, and mental health needs.
             </p>
             <div className="flex gap-4">
               {/* Social placeholders */}
@@ -123,7 +124,7 @@ export default function Footer() {
             <div className="space-y-4 text-sm text-white/60">
               <p>[Address Coming Soon]</p>
               <p>(XXX) XXX-XXXX</p>
-              <p>info@aplaceformertc.org</p>
+              <p>info@definingyourdestiny.org</p>
               <p className="mt-6 text-xs text-white/40">
                 [Hours Coming Soon]
               </p>
@@ -134,7 +135,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-sm">
-            &copy; {new Date().getFullYear()} A Place for Me RTC. All rights reserved.
+            &copy; {new Date().getFullYear()} Defining Your Destiny Youth Center. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-white/40">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>

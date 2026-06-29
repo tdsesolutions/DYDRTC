@@ -1,17 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Heart, Users, Award, BookOpen, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowRight, Heart, Users, Award, BookOpen } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import { useState } from "react";
 
 const roleCategories = [
   {
-    category: "Clinical & Medical",
+    category: "Clinical & Therapeutic",
     roles: [
-      "Registered Nurses (RN)",
-      "Licensed Vocational Nurses (LVN)",
-      "Clinical Therapists",
+      "Licensed Therapists",
+      "Clinical Supervisors",
       "Case Managers",
       "Behavioral Specialists",
     ],
@@ -89,11 +88,11 @@ export default function CareersPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#1E1B14]">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#17375E]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="max-w-3xl">
-              <p className="text-[#5A7A7A] text-sm font-medium tracking-widest uppercase mb-4">
+              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
                 Careers
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
@@ -109,15 +108,15 @@ export default function CareersPage() {
       </section>
 
       {/* Why Work With Us */}
-      <section className="py-24 lg:py-32 bg-[#FAF9F7]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-6">
-                Why Work With A Place for Me RTC?
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
+                Why Work With Defining Your Destiny?
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed">
-                Working at A Place for Me RTC means being part of something bigger than yourself. 
+                Working at Defining Your Destiny Youth Center means being part of something bigger than yourself. 
                 It means having the opportunity to change trajectories, restore hope, and help 
                 young people discover their potential. We are committed to supporting our staff 
                 with the training, resources, and culture they need to thrive in this important work.
@@ -128,11 +127,11 @@ export default function CareersPage() {
       </section>
 
       {/* Culture & Values */}
-      <section className="py-24 lg:py-32 bg-[#F5F3EF]">
+      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn direction="left">
-              <div className="aspect-[4/3] bg-[#E8E2D9] rounded-2xl overflow-hidden">
+              <div className="aspect-[4/3] bg-[#E8E8E8] rounded-2xl overflow-hidden">
                 <div className="w-full h-full flex items-center justify-center text-[#9A9A9A]">
                   [Team Culture Image]
                 </div>
@@ -141,13 +140,13 @@ export default function CareersPage() {
             
             <div>
               <FadeIn direction="right">
-                <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-6">
+                <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
                   Our Culture & Values
                 </h2>
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-semibold text-[#1E1B14] mb-2 flex items-center gap-2">
-                      <Heart className="w-5 h-5 text-[#5A7A7A]" />
+                    <h3 className="text-xl font-semibold text-[#17375E] mb-2 flex items-center gap-2">
+                      <Heart className="w-5 h-5 text-[#1F5D3A]" />
                       Compassion First
                     </h3>
                     <p className="text-[#4A4A4A]">
@@ -156,8 +155,8 @@ export default function CareersPage() {
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-[#1E1B14] mb-2 flex items-center gap-2">
-                      <Users className="w-5 h-5 text-[#5A7A7A]" />
+                    <h3 className="text-xl font-semibold text-[#17375E] mb-2 flex items-center gap-2">
+                      <Users className="w-5 h-5 text-[#1F5D3A]" />
                       Teamwork & Collaboration
                     </h3>
                     <p className="text-[#4A4A4A]">
@@ -166,8 +165,8 @@ export default function CareersPage() {
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-[#1E1B14] mb-2 flex items-center gap-2">
-                      <Award className="w-5 h-5 text-[#5A7A7A]" />
+                    <h3 className="text-xl font-semibold text-[#17375E] mb-2 flex items-center gap-2">
+                      <Award className="w-5 h-5 text-[#1F5D3A]" />
                       Excellence in Care
                     </h3>
                     <p className="text-[#4A4A4A]">
@@ -176,8 +175,8 @@ export default function CareersPage() {
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-[#1E1B14] mb-2 flex items-center gap-2">
-                      <BookOpen className="w-5 h-5 text-[#5A7A7A]" />
+                    <h3 className="text-xl font-semibold text-[#17375E] mb-2 flex items-center gap-2">
+                      <BookOpen className="w-5 h-5 text-[#1F5D3A]" />
                       Growth & Learning
                     </h3>
                     <p className="text-[#4A4A4A]">
@@ -193,7 +192,7 @@ export default function CareersPage() {
       </section>
 
       {/* Roles We Hire */}
-      <section className="py-24 lg:py-32 bg-[#1E1B14]">
+      <section className="py-24 lg:py-32 bg-[#17375E]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="text-center mb-16">
@@ -215,7 +214,7 @@ export default function CareersPage() {
                   <ul className="space-y-2">
                     {category.roles.map((role) => (
                       <li key={role} className="flex items-center gap-2 text-white/60">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#5A7A7A]" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#C6A15B]" />
                         {role}
                       </li>
                     ))}
@@ -228,11 +227,11 @@ export default function CareersPage() {
       </section>
 
       {/* Training & Development */}
-      <section className="py-24 lg:py-32 bg-[#FAF9F7]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <FadeIn>
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-6">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
                 Training & Professional Development
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed mb-8">
@@ -252,7 +251,7 @@ export default function CareersPage() {
                   "Mentorship and supervision",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3 text-[#4A4A4A]">
-                    <BookOpen className="w-5 h-5 text-[#5A7A7A]" />
+                    <BookOpen className="w-5 h-5 text-[#1F5D3A]" />
                     {item}
                   </div>
                 ))}
@@ -260,8 +259,8 @@ export default function CareersPage() {
             </FadeIn>
 
             <FadeIn direction="right">
-              <div className="bg-[#F5F3EF] rounded-2xl p-8 lg:p-12">
-                <h3 className="text-2xl font-semibold text-[#1E1B14] mb-6">
+              <div className="bg-[#F5F5F5] rounded-2xl p-8 lg:p-12">
+                <h3 className="text-2xl font-semibold text-[#17375E] mb-6">
                   Workplace Expectations
                 </h3>
                 <p className="text-[#4A4A4A] mb-6">
@@ -277,8 +276,8 @@ export default function CareersPage() {
                     { title: "Safety", desc: "Adherence to all safety protocols and procedures" },
                     { title: "Growth Mindset", desc: "Willingness to learn, adapt, and improve" },
                   ].map((item) => (
-                    <li key={item.title} className="border-b border-[#E8E2D9] pb-4 last:border-0">
-                      <h4 className="font-semibold text-[#1E1B14]">{item.title}</h4>
+                    <li key={item.title} className="border-b border-[#E8E8E8] pb-4 last:border-0">
+                      <h4 className="font-semibold text-[#17375E]">{item.title}</h4>
                       <p className="text-sm text-[#4A4A4A]">{item.desc}</p>
                     </li>
                   ))}
@@ -290,11 +289,11 @@ export default function CareersPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-24 lg:py-32 bg-[#F5F3EF]">
+      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-4">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
                 Benefits & Perks
               </h2>
               <p className="text-lg text-[#4A4A4A] max-w-2xl mx-auto">
@@ -306,8 +305,8 @@ export default function CareersPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <FadeIn key={benefit.title} delay={index * 0.1}>
-                <div className="bg-white rounded-xl p-8 border border-[#E8E2D9] h-full">
-                  <h3 className="text-lg font-semibold text-[#1E1B14] mb-2">{benefit.title}</h3>
+                <div className="bg-white rounded-xl p-8 border border-[#E8E8E8] h-full">
+                  <h3 className="text-lg font-semibold text-[#17375E] mb-2">{benefit.title}</h3>
                   <p className="text-[#4A4A4A] text-sm">{benefit.desc}</p>
                 </div>
               </FadeIn>
@@ -317,7 +316,7 @@ export default function CareersPage() {
       </section>
 
       {/* Application Form */}
-      <section className="py-24 lg:py-32 bg-[#1E1B14]">
+      <section className="py-24 lg:py-32 bg-[#17375E]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="max-w-2xl mx-auto">
             <FadeIn>
@@ -343,7 +342,7 @@ export default function CareersPage() {
                       type="text"
                       id="name"
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#5A7A7A]"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
                       placeholder="Your name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -359,7 +358,7 @@ export default function CareersPage() {
                         type="email"
                         id="email"
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#5A7A7A]"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
                         placeholder="email@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -373,7 +372,7 @@ export default function CareersPage() {
                         type="tel"
                         id="phone"
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#5A7A7A]"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
                         placeholder="(XXX) XXX-XXXX"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -388,17 +387,16 @@ export default function CareersPage() {
                     <select
                       id="position"
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-[#5A7A7A]"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-[#C6A15B]"
                       value={formData.position}
                       onChange={(e) => setFormData({ ...formData, position: e.target.value })}
                     >
-                      <option value="" className="text-[#1E1B14]">Select a position category</option>
-                      <option value="nursing" className="text-[#1E1B14]">Nursing (RN/LVN)</option>
-                      <option value="clinical" className="text-[#1E1B14]">Clinical/Medical</option>
-                      <option value="direct-care" className="text-[#1E1B14]">Direct Care</option>
-                      <option value="education" className="text-[#1E1B14]">Education/Development</option>
-                      <option value="admin" className="text-[#1E1B14]">Administration</option>
-                      <option value="other" className="text-[#1E1B14]">Other</option>
+                      <option value="" className="text-[#17375E]">Select a position category</option>
+                      <option value="clinical" className="text-[#17375E]">Clinical/Therapeutic</option>
+                      <option value="direct-care" className="text-[#17375E]">Direct Care</option>
+                      <option value="education" className="text-[#17375E]">Education/Development</option>
+                      <option value="admin" className="text-[#17375E]">Administration</option>
+                      <option value="other" className="text-[#17375E]">Other</option>
                     </select>
                   </div>
 
@@ -409,7 +407,7 @@ export default function CareersPage() {
                     <textarea
                       id="message"
                       rows={4}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#5A7A7A] resize-none"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B] resize-none"
                       placeholder="Briefly describe your experience, qualifications, and why you're interested in working with us..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -420,7 +418,7 @@ export default function CareersPage() {
                     <label className="block text-sm font-medium text-white/80 mb-2">
                       Resume/CV
                     </label>
-                    <div className="border-2 border-dashed border-white/20 rounded-lg p-8 text-center hover:border-[#5A7A7A] transition-colors cursor-pointer">
+                    <div className="border-2 border-dashed border-white/20 rounded-lg p-8 text-center hover:border-[#C6A15B] transition-colors cursor-pointer">
                       <input
                         type="file"
                         accept=".pdf,.doc,.docx"
@@ -431,14 +429,14 @@ export default function CareersPage() {
                         [Resume Upload Placeholder - Click to upload PDF or Word document]
                       </p>
                       {formData.resume && (
-                        <p className="text-[#5A7A7A] text-sm mt-2">Selected: {formData.resume.name}</p>
+                        <p className="text-[#C6A15B] text-sm mt-2">Selected: {formData.resume.name}</p>
                       )}
                     </div>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#1E1B14] font-medium rounded-full hover:bg-[#E8E2D9] transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-white hover:text-[#17375E] transition-colors"
                   >
                     Submit Application <ArrowRight className="w-4 h-4" />
                   </button>

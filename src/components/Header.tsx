@@ -13,14 +13,15 @@ const navLinks = [
     name: "Programs",
     href: "/programs",
     children: [
-      { name: "Primary Medical Needs RTC", href: "/programs/pmn" },
-      { name: "Supervised Independent Living", href: "/programs/sil" },
-      { name: "Transitional Living Program", href: "/programs/tlp" },
+      { name: "Residential Treatment", href: "/programs/pmn" },
+      { name: "Life Skills Development", href: "/programs/sil" },
+      { name: "Transition & Aftercare", href: "/programs/tlp" },
     ],
   },
-  { name: "Resources", href: "/resources" },
   { name: "Admissions", href: "/admissions" },
+  { name: "Resources", href: "/resources" },
   { name: "Careers", href: "/careers" },
+  { name: "Training", href: "/training" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -45,7 +46,7 @@ export default function Header() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#FAF9F7]/95 backdrop-blur-md shadow-sm py-4"
+            ? "bg-white/95 backdrop-blur-md shadow-sm py-4"
             : "bg-transparent py-6"
         }`}
       >
@@ -55,10 +56,10 @@ export default function Header() {
             <Link href="/" className="flex items-center">
               <span
                 className={`text-xl lg:text-2xl font-semibold tracking-tight transition-colors duration-300 ${
-                  isScrolled ? "text-[#1E1B14]" : "text-white"
+                  isScrolled ? "text-[#17375E]" : "text-white"
                 }`}
               >
-                A Place for Me RTC
+                Defining Your Destiny
               </span>
             </Link>
 
@@ -74,7 +75,7 @@ export default function Header() {
                   <Link
                     href={link.href}
                     className={`flex items-center gap-1 text-sm font-medium transition-all duration-300 hover:opacity-70 ${
-                      isScrolled ? "text-[#1E1B14]" : "text-white"
+                      isScrolled ? "text-[#17375E]" : "text-white"
                     }`}
                   >
                     {link.name}
@@ -89,13 +90,13 @@ export default function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-64 bg-[#FAF9F7] rounded-lg shadow-lg py-2 overflow-hidden"
+                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 overflow-hidden"
                       >
                         {link.children.map((child) => (
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block px-4 py-3 text-sm text-[#1E1B14] hover:bg-[#E8E2D9] transition-colors"
+                            className="block px-4 py-3 text-sm text-[#17375E] hover:bg-[#F5F5F5] transition-colors"
                           >
                             {child.name}
                           </Link>
@@ -113,8 +114,8 @@ export default function Header() {
                 href="/admissions"
                 className={`inline-flex items-center px-6 py-3 text-sm font-medium rounded-full transition-all duration-300 ${
                   isScrolled
-                    ? "bg-[#1E1B14] text-white hover:bg-[#4A4A4A]"
-                    : "bg-white text-[#1E1B14] hover:bg-[#E8E2D9]"
+                    ? "bg-[#1F5D3A] text-white hover:bg-[#17375E]"
+                    : "bg-white text-[#17375E] hover:bg-[#C6A15B] hover:text-white"
                 }`}
               >
                 Start a Referral
@@ -125,7 +126,7 @@ export default function Header() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`lg:hidden p-2 transition-colors ${
-                isScrolled ? "text-[#1E1B14]" : "text-white"
+                isScrolled ? "text-[#17375E]" : "text-white"
               }`}
               aria-label="Toggle menu"
             >
@@ -143,7 +144,7 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[#1E1B14] lg:hidden"
+            className="fixed inset-0 z-40 bg-[#17375E] lg:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full px-6">
               <nav className="flex flex-col items-center gap-6">
@@ -157,7 +158,7 @@ export default function Header() {
                     <Link
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-2xl font-medium text-white hover:text-[#E8E2D9] transition-colors"
+                      className="text-2xl font-medium text-white hover:text-[#C6A15B] transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -188,7 +189,7 @@ export default function Header() {
                 <Link
                   href="/admissions"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-flex items-center px-8 py-4 text-base font-medium bg-white text-[#1E1B14] rounded-full hover:bg-[#E8E2D9] transition-colors"
+                  className="inline-flex items-center px-8 py-4 text-base font-medium bg-white text-[#17375E] rounded-full hover:bg-[#C6A15B] hover:text-white transition-colors"
                 >
                   Start a Referral
                 </Link>
@@ -201,7 +202,7 @@ export default function Header() {
                 className="mt-8 text-center text-[#9A9A9A] text-sm"
               >
                 <p>(XXX) XXX-XXXX</p>
-                <p className="mt-1">info@aplaceformertc.org</p>
+                <p className="mt-1">info@definingyourdestiny.org</p>
               </motion.div>
             </div>
           </motion.div>

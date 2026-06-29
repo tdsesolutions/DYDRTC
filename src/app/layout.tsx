@@ -4,8 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "A Place for Me RTC | Residential Treatment Center",
-  description: "A Place for Me RTC provides a continuum of care for children, adolescents, and young adults through Primary Medical Needs Residential Treatment, Supervised Independent Living, and Transitional Living Programs.",
+  title: "Defining Your Destiny Youth Center | Residential Treatment Center",
+  description: "Defining Your Destiny Youth Center provides trauma-informed residential treatment for children and adolescents with emotional, behavioral, and mental health needs. Texas Chapter 748 licensed.",
 };
 
 export default function RootLayout({

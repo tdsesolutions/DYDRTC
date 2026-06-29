@@ -8,11 +8,11 @@ import { useState } from "react";
 const familyFaqs = [
   {
     question: "How do I know if residential treatment is right for my child?",
-    answer: "Residential treatment may be appropriate when a child has complex needs that cannot be safely or effectively met in a less restrictive setting. Our admissions team can help assess your specific situation and determine if our programs are a good fit. We consider medical needs, behavioral challenges, safety concerns, and the family's overall situation.",
+    answer: "Residential treatment may be appropriate when a child has emotional or behavioral needs that cannot be safely or effectively met in a less restrictive setting. Our admissions team can help assess your specific situation and determine if our programs are a good fit.",
   },
   {
     question: "What is the admissions process?",
-    answer: "The admissions process begins with an initial inquiry, followed by a comprehensive assessment of the child's needs. We review medical records, conduct interviews, and work with referral sources to determine program fit. Once accepted, we coordinate intake logistics and develop an initial treatment plan.",
+    answer: "The admissions process begins with an initial inquiry, followed by a comprehensive assessment of the child's needs. We review records, conduct interviews, and work with referral sources to determine program fit. Once accepted, we coordinate intake logistics and develop an initial treatment plan.",
   },
   {
     question: "How often can I visit my child?",
@@ -35,7 +35,7 @@ const referralFaqs = [
   },
   {
     question: "What information do you need for a referral?",
-    answer: "We typically need basic demographic information, current diagnoses, medical history, behavioral concerns, educational background, insurance information, and current medications. Our admissions team can provide a comprehensive referral checklist.",
+    answer: "We typically need basic demographic information, current diagnoses, relevant history, behavioral concerns, educational background, insurance information, and current medications. Our admissions team can provide a comprehensive referral checklist.",
   },
   {
     question: "How quickly can a placement occur?",
@@ -61,11 +61,11 @@ export default function ResourcesPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#1E1B14]">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#17375E]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="max-w-3xl">
-              <p className="text-[#5A7A7A] text-sm font-medium tracking-widest uppercase mb-4">
+              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
                 Resources
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
@@ -81,11 +81,11 @@ export default function ResourcesPage() {
       </section>
 
       {/* Resource Introduction */}
-      <section className="py-24 lg:py-32 bg-[#FAF9F7]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-6">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
                 How Can We Help?
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed">
@@ -99,15 +99,15 @@ export default function ResourcesPage() {
       </section>
 
       {/* Family FAQs */}
-      <section className="py-24 lg:py-32 bg-[#F5F3EF]">
+      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="max-w-3xl mx-auto">
             <FadeIn>
               <div className="text-center mb-12">
-                <div className="w-16 h-16 rounded-full bg-[#5A7A7A]/10 flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-[#5A7A7A]" />
+                <div className="w-16 h-16 rounded-full bg-[#1F5D3A]/10 flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-[#1F5D3A]" />
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-4">
+                <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
                   Family FAQs
                 </h2>
                 <p className="text-lg text-[#4A4A4A]">
@@ -122,13 +122,13 @@ export default function ResourcesPage() {
                   <div className="bg-white rounded-xl overflow-hidden">
                     <button
                       onClick={() => setOpenFamilyFaq(openFamilyFaq === index ? null : index)}
-                      className="w-full flex items-center justify-between p-6 text-left hover:bg-[#FAF9F7] transition-colors"
+                      className="w-full flex items-center justify-between p-6 text-left hover:bg-[#F5F5F5] transition-colors"
                     >
-                      <span className="font-semibold text-[#1E1B14] pr-8">{faq.question}</span>
+                      <span className="font-semibold text-[#17375E] pr-8">{faq.question}</span>
                       {openFamilyFaq === index ? (
-                        <ChevronUp className="w-5 h-5 text-[#5A7A7A] flex-shrink-0" />
+                        <ChevronUp className="w-5 h-5 text-[#1F5D3A] flex-shrink-0" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-[#5A7A7A] flex-shrink-0" />
+                        <ChevronDown className="w-5 h-5 text-[#1F5D3A] flex-shrink-0" />
                       )}
                     </button>
                     {openFamilyFaq === index && (
@@ -145,15 +145,15 @@ export default function ResourcesPage() {
       </section>
 
       {/* Referral FAQs */}
-      <section className="py-24 lg:py-32 bg-[#FAF9F7]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="max-w-3xl mx-auto">
             <FadeIn>
               <div className="text-center mb-12">
-                <div className="w-16 h-16 rounded-full bg-[#5A7A7A]/10 flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-[#5A7A7A]" />
+                <div className="w-16 h-16 rounded-full bg-[#1F5D3A]/10 flex items-center justify-center mx-auto mb-4">
+                  <FileText className="w-8 h-8 text-[#1F5D3A]" />
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-4">
+                <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
                   Referral Partner FAQs
                 </h2>
                 <p className="text-lg text-[#4A4A4A]">
@@ -165,16 +165,16 @@ export default function ResourcesPage() {
             <div className="space-y-4">
               {referralFaqs.map((faq, index) => (
                 <FadeIn key={index} delay={index * 0.05}>
-                  <div className="bg-white rounded-xl overflow-hidden">
+                  <div className="bg-[#F5F5F5] rounded-xl overflow-hidden">
                     <button
                       onClick={() => setOpenReferralFaq(openReferralFaq === index ? null : index)}
-                      className="w-full flex items-center justify-between p-6 text-left hover:bg-[#FAF9F7] transition-colors"
+                      className="w-full flex items-center justify-between p-6 text-left hover:bg-[#E8E8E8] transition-colors"
                     >
-                      <span className="font-semibold text-[#1E1B14] pr-8">{faq.question}</span>
+                      <span className="font-semibold text-[#17375E] pr-8">{faq.question}</span>
                       {openReferralFaq === index ? (
-                        <ChevronUp className="w-5 h-5 text-[#5A7A7A] flex-shrink-0" />
+                        <ChevronUp className="w-5 h-5 text-[#1F5D3A] flex-shrink-0" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-[#5A7A7A] flex-shrink-0" />
+                        <ChevronDown className="w-5 h-5 text-[#1F5D3A] flex-shrink-0" />
                       )}
                     </button>
                     {openReferralFaq === index && (
@@ -191,7 +191,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* Understanding RTC */}
-      <section className="py-24 lg:py-32 bg-[#1E1B14]">
+      <section className="py-24 lg:py-32 bg-[#17375E]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <FadeIn>
@@ -200,7 +200,7 @@ export default function ResourcesPage() {
               </h2>
               <p className="text-lg text-white/70 leading-relaxed mb-8">
                 Residential treatment centers provide 24-hour care and therapeutic support for 
-                children and adolescents with complex behavioral, emotional, or medical needs. 
+                children and adolescents with emotional, behavioral, or mental health needs. 
                 These programs offer a structured environment where young people can receive 
                 intensive services while living in a safe, supportive setting.
               </p>
@@ -209,12 +209,12 @@ export default function ResourcesPage() {
                   "24-hour supervision and support",
                   "Individual and group therapy",
                   "Educational services",
-                  "Medical and psychiatric care",
+                  "Behavioral health care",
                   "Life skills development",
                   "Family therapy and support",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3 text-white/60">
-                    <div className="w-2 h-2 rounded-full bg-[#5A7A7A]" />
+                    <div className="w-2 h-2 rounded-full bg-[#C6A15B]" />
                     {item}
                   </div>
                 ))}
@@ -233,13 +233,12 @@ export default function ResourcesPage() {
                   {[
                     "Less intensive services have been insufficient",
                     "Safety concerns require 24-hour supervision",
-                    "Complex medical needs require skilled nursing",
                     "Intensive therapeutic intervention is needed",
                     "Family crisis requires temporary placement",
                     "Transition from hospital or acute care is needed",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-white/60">
-                      <HelpCircle className="w-5 h-5 text-[#5A7A7A] mt-0.5 flex-shrink-0" />
+                      <HelpCircle className="w-5 h-5 text-[#C6A15B] mt-0.5 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -251,14 +250,14 @@ export default function ResourcesPage() {
       </section>
 
       {/* Downloads */}
-      <section className="py-24 lg:py-32 bg-[#FAF9F7]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="text-center mb-12">
-              <div className="w-16 h-16 rounded-full bg-[#5A7A7A]/10 flex items-center justify-center mx-auto mb-4">
-                <Download className="w-8 h-8 text-[#5A7A7A]" />
+              <div className="w-16 h-16 rounded-full bg-[#1F5D3A]/10 flex items-center justify-center mx-auto mb-4">
+                <Download className="w-8 h-8 text-[#1F5D3A]" />
               </div>
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-4">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
                 Downloadable Resources
               </h2>
               <p className="text-lg text-[#4A4A4A]">
@@ -270,11 +269,11 @@ export default function ResourcesPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {downloads.map((item, index) => (
               <FadeIn key={item.title} delay={index * 0.1}>
-                <div className="bg-white rounded-xl p-6 border border-[#E8E2D9] hover:shadow-lg transition-shadow cursor-pointer group">
-                  <FileText className="w-10 h-10 text-[#5A7A7A] mb-4" />
-                  <h3 className="font-semibold text-[#1E1B14] mb-2">{item.title}</h3>
+                <div className="bg-[#F5F5F5] rounded-xl p-6 border border-[#E8E8E8] hover:shadow-lg transition-shadow cursor-pointer group">
+                  <FileText className="w-10 h-10 text-[#1F5D3A] mb-4" />
+                  <h3 className="font-semibold text-[#17375E] mb-2">{item.title}</h3>
                   <p className="text-sm text-[#4A4A4A] mb-4">{item.desc}</p>
-                  <span className="inline-flex items-center text-sm text-[#5A7A7A] font-medium group-hover:gap-2 transition-all">
+                  <span className="inline-flex items-center text-sm text-[#1F5D3A] font-medium group-hover:gap-2 transition-all">
                     Download {item.size} <ArrowRight className="w-4 h-4 ml-1" />
                   </span>
                 </div>
@@ -285,11 +284,11 @@ export default function ResourcesPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 lg:py-32 bg-[#F5F3EF]">
+      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#1E1B14] mb-6">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
                 Still Have Questions?
               </h2>
               <p className="text-lg text-[#4A4A4A] mb-8">
@@ -299,13 +298,13 @@ export default function ResourcesPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#1E1B14] text-white font-medium rounded-full hover:bg-[#4A4A4A] transition-colors"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#17375E] text-white font-medium rounded-full hover:bg-[#1F5D3A] transition-colors"
                 >
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/admissions"
-                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#1E1B14] text-[#1E1B14] font-medium rounded-full hover:bg-[#1E1B14] hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#17375E] text-[#17375E] font-medium rounded-full hover:bg-[#17375E] hover:text-white transition-colors"
                 >
                   Start a Referral
                 </Link>
