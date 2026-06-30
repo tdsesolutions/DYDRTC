@@ -1,0 +1,471 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight, Heart, Users, Award, BookOpen } from "lucide-react";
+import FadeIn from "@/components/FadeIn";
+import { useState } from "react";
+
+const roleCategories = [
+  {
+    category: "Clinical & Therapeutic",
+    roles: [
+      "Licensed Therapists",
+      "Clinical Supervisors",
+      "Case Managers",
+      "Behavioral Specialists",
+    ],
+  },
+  {
+    category: "Direct Care & Support",
+    roles: [
+      "Direct Care Staff",
+      "Youth Counselors",
+      "Residential Support Staff",
+      "Activity Coordinators",
+    ],
+  },
+  {
+    category: "Education & Development",
+    roles: [
+      "Educational Liaisons",
+      "Life Skills Instructors",
+      "Vocational Trainers",
+    ],
+  },
+  {
+    category: "Operations & Administration",
+    roles: [
+      "Administrative Staff",
+      "Human Resources",
+      "Finance & Billing",
+      "Facility Support",
+    ],
+  },
+];
+
+const benefits = [
+  {
+    title: "Competitive Compensation",
+    desc: "Salary packages commensurate with experience and role responsibilities.",
+  },
+  {
+    title: "Health & Wellness",
+    desc: "Medical, dental, and vision coverage for eligible employees.",
+  },
+  {
+    title: "Professional Development",
+    desc: "Ongoing training, continuing education support, and career advancement opportunities.",
+  },
+  {
+    title: "Work-Life Balance",
+    desc: "Flexible scheduling options and paid time off for eligible positions.",
+  },
+  {
+    title: "Meaningful Work",
+    desc: "The opportunity to make a real difference in the lives of young people and families.",
+  },
+  {
+    title: "Supportive Environment",
+    desc: "A collaborative culture that values teamwork, growth, and employee well-being.",
+  },
+];
+
+export default function CareersPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    position: "",
+    message: "",
+    resume: null as File | null,
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert("Application submitted (placeholder - no backend connected)");
+  };
+
+  return (
+    <>
+      {/* Page Hero */}
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#17375E] to-[#1F5D3A]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.1),_transparent_50%)]" />
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="flex items-center justify-between">
+            <FadeIn>
+              <div className="max-w-3xl">
+                <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
+                  Careers
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+                  Join our mission to transform lives.
+                </h1>
+                <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
+                  Be part of a dedicated team making a meaningful difference in the lives of 
+                  young people and families every day.
+                </p>
+              </div>
+            </FadeIn>
+            <div className="hidden lg:flex w-[45%] h-[400px] items-center justify-start">
+              <div className="relative w-full h-[600px] -translate-x-12">
+                <Image
+                  src="/images/hero-artwork-careers.png"
+                  alt="Careers"
+                  fill
+                  className="object-contain object-center"
+                  priority
+                  sizes="40vw"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Work With Us */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+          <FadeIn>
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
+                Why Work With Defining Your Destiny?
+              </h2>
+              <p className="text-lg text-[#4A4A4A] leading-relaxed">
+                Working at Defining Your Destiny Youth Center means being part of something bigger than yourself. 
+                It means having the opportunity to change trajectories, restore hope, and help 
+                young people discover their potential. We are committed to supporting our staff 
+                with the training, resources, and culture they need to thrive in this important work.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Culture & Values */}
+      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <FadeIn direction="left">
+              <div className="aspect-[4/3] relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/team-culture.jpg"
+                  alt="Team Culture"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </FadeIn>
+            
+            <div>
+              <FadeIn direction="right">
+                <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
+                  Our Culture & Values
+                </h2>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-xl font-semibold text-[#17375E] mb-2 flex items-center gap-2">
+                      <Heart className="w-5 h-5 text-[#1F5D3A]" />
+                      Compassion First
+                    </h3>
+                    <p className="text-[#4A4A4A]">
+                      We approach every interaction with empathy, understanding that our residents 
+                      and their families are navigating challenging circumstances.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-[#17375E] mb-2 flex items-center gap-2">
+                      <Users className="w-5 h-5 text-[#1F5D3A]" />
+                      Teamwork & Collaboration
+                    </h3>
+                    <p className="text-[#4A4A4A]">
+                      We believe the best outcomes come from collaborative efforts across disciplines. 
+                      Every team member&apos;s contribution is valued.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-[#17375E] mb-2 flex items-center gap-2">
+                      <Award className="w-5 h-5 text-[#1F5D3A]" />
+                      Excellence in Care
+                    </h3>
+                    <p className="text-[#4A4A4A]">
+                      We maintain the highest standards in everything we do, continuously seeking 
+                      to improve our programs and practices.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-[#17375E] mb-2 flex items-center gap-2">
+                      <BookOpen className="w-5 h-5 text-[#1F5D3A]" />
+                      Growth & Learning
+                    </h3>
+                    <p className="text-[#4A4A4A]">
+                      We invest in our staff&apos;s professional development, providing ongoing training 
+                      and opportunities for advancement.
+                    </p>
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Roles We Hire */}
+      <section className="py-24 lg:py-32 bg-[#17375E]">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-4">
+                Roles We May Hire For
+              </h2>
+              <p className="text-lg text-white/70 max-w-2xl mx-auto">
+                We are always looking for talented, compassionate individuals to join our team. 
+                Below are examples of positions that may be available.
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {roleCategories.map((category, index) => (
+              <FadeIn key={category.category} delay={index * 0.1}>
+                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+                  <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
+                  <ul className="space-y-2">
+                    {category.roles.map((role) => (
+                      <li key={role} className="flex items-center gap-2 text-white/60">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#C6A15B]" />
+                        {role}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Training & Development */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+            <FadeIn>
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
+                Training & Professional Development
+              </h2>
+              <p className="text-lg text-[#4A4A4A] leading-relaxed mb-8">
+                We believe that investing in our staff&apos;s growth directly benefits the individuals 
+                we serve. Our comprehensive training and development programs ensure that every 
+                team member has the skills and knowledge needed to excel.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "Comprehensive orientation and onboarding",
+                  "Ongoing clinical and skills training",
+                  "Crisis prevention and intervention certification",
+                  "Trauma-informed care training",
+                  "Leadership development programs",
+                  "Continuing education support",
+                  "Conference and workshop attendance",
+                  "Mentorship and supervision",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3 text-[#4A4A4A]">
+                    <BookOpen className="w-5 h-5 text-[#1F5D3A]" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="right">
+              <div className="bg-[#F5F5F5] rounded-2xl p-8 lg:p-12">
+                <h3 className="text-2xl font-semibold text-[#17375E] mb-6">
+                  Workplace Expectations
+                </h3>
+                <p className="text-[#4A4A4A] mb-6">
+                  We maintain high standards for our team members, as the nature of our work 
+                  requires professionalism, reliability, and commitment.
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    { title: "Professionalism", desc: "Maintaining appropriate boundaries and professional conduct" },
+                    { title: "Reliability", desc: "Consistent attendance and punctuality" },
+                    { title: "Teamwork", desc: "Collaboration and communication with colleagues" },
+                    { title: "Confidentiality", desc: "Protecting resident privacy and information" },
+                    { title: "Safety", desc: "Adherence to all safety protocols and procedures" },
+                    { title: "Growth Mindset", desc: "Willingness to learn, adapt, and improve" },
+                  ].map((item) => (
+                    <li key={item.title} className="border-b border-[#E8E8E8] pb-4 last:border-0">
+                      <h4 className="font-semibold text-[#17375E]">{item.title}</h4>
+                      <p className="text-sm text-[#4A4A4A]">{item.desc}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
+                Benefits & Perks
+              </h2>
+              <p className="text-lg text-[#4A4A4A] max-w-2xl mx-auto">
+                We offer comprehensive benefits to support our team&apos;s well-being and professional growth.
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <FadeIn key={benefit.title} delay={index * 0.1}>
+                <div className="bg-white rounded-xl p-8 border border-[#E8E8E8] h-full">
+                  <h3 className="text-lg font-semibold text-[#17375E] mb-2">{benefit.title}</h3>
+                  <p className="text-[#4A4A4A] text-sm">{benefit.desc}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Application Form */}
+      <section className="py-24 lg:py-32 bg-[#17375E]">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+          <div className="max-w-2xl mx-auto">
+            <FadeIn>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-4">
+                  Careers Inquiry
+                </h2>
+                <p className="text-lg text-white/70">
+                  Interested in joining our team? Fill out the form below and we&apos;ll be in touch 
+                  about current and future opportunities.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-white/10">
+                <div className="space-y-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
+                      placeholder="Your name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    />
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
+                        placeholder="email@example.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-white/80 mb-2">
+                        Phone *
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
+                        placeholder="(XXX) XXX-XXXX"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="position" className="block text-sm font-medium text-white/80 mb-2">
+                      Position of Interest *
+                    </label>
+                    <select
+                      id="position"
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-[#C6A15B]"
+                      value={formData.position}
+                      onChange={(e) => setFormData({ ...formData, position: e.target.value })}
+                    >
+                      <option value="" className="text-[#17375E]">Select a position category</option>
+                      <option value="clinical" className="text-[#17375E]">Clinical/Therapeutic</option>
+                      <option value="direct-care" className="text-[#17375E]">Direct Care</option>
+                      <option value="education" className="text-[#17375E]">Education/Development</option>
+                      <option value="admin" className="text-[#17375E]">Administration</option>
+                      <option value="other" className="text-[#17375E]">Other</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2">
+                      Tell Us About Yourself
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={4}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B] resize-none"
+                      placeholder="Briefly describe your experience, qualifications, and why you're interested in working with us..."
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-white/80 mb-2">
+                      Resume/CV
+                    </label>
+                    <div className="border-2 border-dashed border-white/20 rounded-lg p-8 text-center hover:border-[#C6A15B] transition-colors cursor-pointer">
+                      <input
+                        type="file"
+                        accept=".pdf,.doc,.docx"
+                        className="hidden"
+                        onChange={(e) => setFormData({ ...formData, resume: e.target.files?.[0] || null })}
+                      />
+                      <p className="text-white/60 text-sm">
+                        [Resume Upload Placeholder - Click to upload PDF or Word document]
+                      </p>
+                      {formData.resume && (
+                        <p className="text-[#C6A15B] text-sm mt-2">Selected: {formData.resume.name}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-white hover:text-[#17375E] transition-colors"
+                  >
+                    Submit Application <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </form>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
