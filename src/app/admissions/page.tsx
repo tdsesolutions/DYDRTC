@@ -67,10 +67,10 @@ export default function AdmissionsPage() {
                 </p>
               </div>
             </FadeIn>
-            <div className="hidden lg:flex w-[45%] h-[400px] items-center justify-start relative">
-              <div className="relative w-full h-[600px] -translate-x-12">
+            <div className="hidden lg:flex w-[40%] h-[400px] items-center justify-start overflow-hidden">
+              <div className="relative w-full h-[540px] -translate-x-12">
                 <Image
-                  src="/images/hero-artwork-admissions.png"
+                  src="/images/hero-artwork-admissions-clean.png"
                   alt="Admissions"
                   fill
                   className="object-contain object-center"
