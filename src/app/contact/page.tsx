@@ -42,15 +42,15 @@ export default function ContactPage() {
                 </p>
               </div>
             </FadeIn>
-            <div className="hidden lg:flex w-[45%] h-[400px] items-center justify-start">
-              <div className="relative w-full h-[600px] -translate-x-12">
+            <div className="hidden lg:flex w-[45%] h-[400px] items-center justify-center">
+              <div className="relative w-[800px] h-[960px] max-w-full max-h-full">
                 <Image
-                  src="/images/hero-artwork-contact.png"
-                  alt="Contact Us"
+                  src="/images/DYDlogo1.png"
+                  alt="Defining Your Destiny"
                   fill
                   className="object-contain object-center"
                   priority
-                  sizes="40vw"
+                  sizes="800px"
                 />
               </div>
             </div>
