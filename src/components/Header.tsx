@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 
@@ -54,13 +55,14 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <span
-                className={`text-xl lg:text-2xl font-semibold tracking-tight transition-colors duration-300 ${
-                  isScrolled ? "text-[#17375E]" : "text-white"
-                }`}
-              >
-                Defining Your Destiny
-              </span>
+              <Image
+                src="/images/DYDlogo.png"
+                alt="Defining Your Destiny"
+                width={280}
+                height={67}
+                className="h-14 w-auto object-contain"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}
