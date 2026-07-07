@@ -217,7 +217,7 @@ export default function Home() {
               <FadeIn direction="left">
                 <div className="aspect-[4/3] relative rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/residential-treatment-environment.jpg"
+                    src="/images/residential-treatment-environment.png"
                     alt="Residential Treatment Environment"
                     fill
                     className="object-cover object-center"
