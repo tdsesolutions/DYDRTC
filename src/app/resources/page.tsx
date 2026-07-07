@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, BookOpen, Users, FileText, HelpCircle, ChevronDown, ChevronUp, Download } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import { useState } from "react";
@@ -61,22 +62,37 @@ export default function ResourcesPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#17375E]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <FadeIn>
-            <div className="max-w-3xl">
-              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
-                Resources
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-                Information and support for families and professionals.
-              </h1>
-              <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
-                Find answers to common questions, download helpful resources, and learn more 
-                about residential treatment.
-              </p>
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#17375E] to-[#1F5D3A]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.1),_transparent_50%)]" />
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="flex items-center justify-between">
+            <FadeIn>
+              <div className="max-w-3xl">
+                <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
+                  Resources
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+                  Information and support for families and professionals.
+                </h1>
+                <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
+                  Find answers to common questions, download helpful resources, and learn more 
+                  about residential treatment.
+                </p>
+              </div>
+            </FadeIn>
+            <div className="hidden lg:flex w-[45%] h-[400px] items-center justify-start">
+              <div className="relative w-full h-[540px] -translate-x-12">
+                <Image
+                  src="/images/hero-artwork-resources-clean.png"
+                  alt="Resources"
+                  fill
+                  className="object-contain object-center"
+                  priority
+                  sizes="40vw"
+                />
+              </div>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </section>
 

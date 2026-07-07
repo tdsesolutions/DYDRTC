@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Phone, Mail, MapPin, Clock, AlertCircle } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import { useState } from "react";
@@ -23,22 +24,37 @@ export default function ContactPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#17375E]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <FadeIn>
-            <div className="max-w-3xl">
-              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
-                Contact Us
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-                We&apos;re here to help.
-              </h1>
-              <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
-                Reach out with questions, referrals, or to learn more about our programs. 
-                Our team is ready to assist you.
-              </p>
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#17375E] to-[#1F5D3A]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.1),_transparent_50%)]" />
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="flex items-center justify-between">
+            <FadeIn>
+              <div className="max-w-3xl">
+                <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
+                  Contact Us
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+                  We&apos;re here to help.
+                </h1>
+                <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
+                  Reach out with questions, referrals, or to learn more about our programs. 
+                  Our team is ready to assist you.
+                </p>
+              </div>
+            </FadeIn>
+            <div className="hidden lg:flex w-[45%] h-[400px] items-center justify-center">
+              <div className="relative w-[800px] h-[960px] max-w-full max-h-full">
+                <Image
+                  src="/images/DYDlogo1.png"
+                  alt="Defining Your Destiny"
+                  fill
+                  className="object-contain object-center"
+                  priority
+                  sizes="800px"
+                />
+              </div>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -244,10 +260,14 @@ export default function ContactPage() {
           </FadeIn>
 
           <FadeIn>
-            <div className="aspect-video bg-[#E8E8E8] rounded-2xl overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-[#9A9A9A]">
-                [Map Placeholder - Add Google Maps or similar embed]
-              </div>
+            <div className="aspect-video relative rounded-2xl overflow-hidden">
+              <Image
+                src="/images/location-map.jpg"
+                alt="Location Map"
+                fill
+                className="object-cover object-center"
+                sizes="100vw"
+              />
             </div>
           </FadeIn>
         </div>

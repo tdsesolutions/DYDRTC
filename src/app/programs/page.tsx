@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Heart, Home, GraduationCap, ChevronRight } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
@@ -60,21 +61,35 @@ export default function ProgramsPage() {
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#17375E] to-[#1F5D3A]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.1),_transparent_50%)]" />
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
-          <FadeIn>
-            <div className="max-w-3xl">
-              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
-                Our Programs
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-                Programs designed to transform lives.
-              </h1>
-              <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
-                From intensive residential treatment through life skills development to successful 
-                transition, we guide young people through every stage of their journey toward 
-                independence and a brighter future.
-              </p>
+          <div className="flex items-center justify-between">
+            <FadeIn>
+              <div className="max-w-3xl">
+                <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
+                  Our Programs
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+                  Programs designed to transform lives.
+                </h1>
+                <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
+                  From intensive residential treatment through life skills development to successful 
+                  transition, we guide young people through every stage of their journey toward 
+                  independence and a brighter future.
+                </p>
+              </div>
+            </FadeIn>
+            <div className="hidden lg:flex w-[40%] h-[400px] items-center justify-start overflow-hidden">
+              <div className="relative w-full h-[540px] translate-x-0">
+                <Image
+                  src="/images/hero-artwork-programs-clean.png"
+                  alt="Our Programs"
+                  fill
+                  className="object-contain object-center"
+                  priority
+                  sizes="40vw"
+                />
+              </div>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </section>
 

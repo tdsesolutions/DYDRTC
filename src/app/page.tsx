@@ -77,7 +77,7 @@ export default function Home() {
 
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 py-32 lg:py-40">
             <div className="max-w-3xl">
-              <motion.p
+                <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -215,11 +215,14 @@ export default function Home() {
           <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <FadeIn direction="left">
-                <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5D3A]/10 to-[#17375E]/10 rounded-2xl overflow-hidden flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <Heart className="w-16 h-16 text-[#1F5D3A]/30 mx-auto mb-4" />
-                    <p className="text-[#4A4A4A]/50 text-sm">Residential Treatment Environment</p>
-                  </div>
+                <div className="aspect-[4/3] relative rounded-2xl overflow-hidden">
+                  <Image
+                    src="/images/residential-treatment-environment.jpg"
+                    alt="Residential Treatment Environment"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
                 </div>
               </FadeIn>
               

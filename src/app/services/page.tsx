@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Brain, ClipboardList, BookOpen, Users, Map, Shield } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 
@@ -50,20 +51,34 @@ export default function ServicesPage() {
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#17375E] to-[#1F5D3A]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.1),_transparent_50%)]" />
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
-          <FadeIn>
-            <div className="max-w-3xl">
-              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
-                Our Services
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-                Comprehensive services for transformation.
-              </h1>
-              <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
-                We provide integrated services that address the emotional, behavioral, educational, 
-                and developmental needs of every young person we serve.
-              </p>
+          <div className="flex items-center justify-between">
+            <FadeIn>
+              <div className="max-w-3xl">
+                <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
+                  Our Services
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+                  Comprehensive services for transformation.
+                </h1>
+                <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
+                  We provide integrated services that address the emotional, behavioral, educational, 
+                  and developmental needs of every young person we serve.
+                </p>
+              </div>
+            </FadeIn>
+            <div className="hidden lg:flex w-[40%] h-[400px] items-center justify-start overflow-hidden">
+              <div className="relative w-full h-[540px] translate-x-0">
+                <Image
+                  src="/images/hero-artwork-services-clean.png"
+                  alt="Our Services"
+                  fill
+                  className="object-contain object-center"
+                  priority
+                  sizes="40vw"
+                />
+              </div>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -123,11 +138,14 @@ export default function ServicesPage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn direction="left">
-              <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5D3A]/10 to-[#17375E]/10 rounded-2xl overflow-hidden flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Users className="w-16 h-16 text-[#1F5D3A]/30 mx-auto mb-4" />
-                  <p className="text-[#4A4A4A]/50 text-sm">Collaborative Care Team</p>
-                </div>
+              <div className="aspect-[4/3] relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/care-team.jpg"
+                  alt="Collaborative Care Team"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </FadeIn>
             

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Home, Users, BookOpen, Heart, ChevronDown, ChevronUp } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import { useState } from "react";
@@ -58,10 +59,14 @@ export default function LifeSkillsPage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn direction="left">
-              <div className="aspect-[4/3] bg-[#F5F5F5] rounded-2xl overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-[#9A9A9A]">
-                  [Life Skills Image]
-                </div>
+              <div className="aspect-[4/3] relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/program-life-skills.jpg"
+                  alt="Life Skills Development"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </FadeIn>
             
@@ -297,10 +302,14 @@ export default function LifeSkillsPage() {
             </div>
 
             <FadeIn direction="right">
-              <div className="aspect-[4/3] bg-[#E8E8E8] rounded-2xl overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-[#9A9A9A]">
-                  [Progress Tracking Image]
-                </div>
+              <div className="aspect-[4/3] relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/progress-tracking.jpg"
+                  alt="Progress Tracking"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </FadeIn>
           </div>

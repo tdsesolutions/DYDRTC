@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const footerLinks = {
@@ -59,12 +60,29 @@ export default function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
+      <div className="relative max-w-[1440px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
+        {/* Centered Footer Logo - Absolute positioned */}
+        <div className="absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+          <Image
+            src="/images/DYDlogo1.png"
+            alt="Defining Your Destiny"
+            width={200}
+            height={50}
+            className="w-[200px] h-auto object-contain opacity-90"
+          />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
-              <span className="text-xl font-semibold">Defining Your Destiny</span>
+              <Image
+                src="/images/DYDlogo1.png"
+                alt="Defining Your Destiny"
+                width={72}
+                height={18}
+                className="w-[72px] h-auto object-contain"
+              />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Providing trauma-informed residential treatment and supportive services 

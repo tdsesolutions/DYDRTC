@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Award, BookOpen, Users, Calendar, CheckCircle, ChevronDown, ChevronUp } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import { useState } from "react";
@@ -61,22 +62,37 @@ export default function TrainingPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#17375E]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <FadeIn>
-            <div className="max-w-3xl">
-              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
-                Professional Development
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-                LCCA & Director Training
-              </h1>
-              <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
-                Comprehensive training and professional development for Licensed Child Care 
-                Administrators and Residential Treatment Center leadership.
-              </p>
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#17375E] to-[#1F5D3A]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.1),_transparent_50%)]" />
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="flex items-center justify-between">
+            <FadeIn>
+              <div className="max-w-3xl">
+                <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
+                  Professional Development
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+                  LCCA & Director Training
+                </h1>
+                <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
+                  Comprehensive training and professional development for Licensed Child Care 
+                  Administrators and Residential Treatment Center leadership.
+                </p>
+              </div>
+            </FadeIn>
+            <div className="hidden lg:flex w-[45%] h-[400px] items-center justify-start">
+              <div className="relative w-full h-[540px] -translate-x-12">
+                <Image
+                  src="/images/hero-artwork-training-clean.png"
+                  alt="Training"
+                  fill
+                  className="object-contain object-center"
+                  priority
+                  sizes="40vw"
+                />
+              </div>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -85,10 +101,14 @@ export default function TrainingPage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn direction="left">
-              <div className="aspect-[4/3] bg-[#F5F5F5] rounded-2xl overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-[#9A9A9A]">
-                  [Training Session Image]
-                </div>
+              <div className="aspect-[4/3] relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/training-session.jpg"
+                  alt="Training Session"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </FadeIn>
             

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ClipboardList, Users, FileCheck, Phone, Clock, ChevronDown, ChevronUp, AlertCircle } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import { useState } from "react";
@@ -48,22 +49,37 @@ export default function AdmissionsPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#17375E]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <FadeIn>
-            <div className="max-w-3xl">
-              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
-                Admissions
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-                Begin the journey toward healing.
-              </h1>
-              <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
-                Our admissions team is here to guide you through every step of the process 
-                with compassion and expertise.
-              </p>
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#17375E] to-[#1F5D3A]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.1),_transparent_50%)]" />
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="flex items-center justify-between">
+            <FadeIn>
+              <div className="max-w-3xl">
+                <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
+                  Admissions
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+                  Begin the journey toward healing.
+                </h1>
+                <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
+                  Our admissions team is here to guide you through every step of the process 
+                  with compassion and expertise.
+                </p>
+              </div>
+            </FadeIn>
+            <div className="hidden lg:flex w-[40%] h-[400px] items-center justify-start overflow-hidden">
+              <div className="relative w-full h-[540px] -translate-x-12">
+                <Image
+                  src="/images/hero-artwork-admissions-clean.png"
+                  alt="Admissions"
+                  fill
+                  className="object-contain object-center"
+                  priority
+                  sizes="40vw"
+                />
+              </div>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </section>
 

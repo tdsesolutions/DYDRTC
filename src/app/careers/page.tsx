@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Heart, Users, Award, BookOpen } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import { useState } from "react";
@@ -88,22 +89,37 @@ export default function CareersPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#17375E]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <FadeIn>
-            <div className="max-w-3xl">
-              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
-                Careers
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-                Join our mission to transform lives.
-              </h1>
-              <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
-                Be part of a dedicated team making a meaningful difference in the lives of 
-                young people and families every day.
-              </p>
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#17375E] to-[#1F5D3A]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.1),_transparent_50%)]" />
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="flex items-center justify-between">
+            <FadeIn>
+              <div className="max-w-3xl">
+                <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
+                  Careers
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+                  Join our mission to transform lives.
+                </h1>
+                <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
+                  Be part of a dedicated team making a meaningful difference in the lives of 
+                  young people and families every day.
+                </p>
+              </div>
+            </FadeIn>
+            <div className="hidden lg:flex w-[45%] h-[400px] items-center justify-start">
+              <div className="relative w-full h-[600px] -translate-x-12">
+                <Image
+                  src="/images/hero-artwork-careers.png"
+                  alt="Careers"
+                  fill
+                  className="object-contain object-center"
+                  priority
+                  sizes="40vw"
+                />
+              </div>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -131,10 +147,14 @@ export default function CareersPage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn direction="left">
-              <div className="aspect-[4/3] bg-[#E8E8E8] rounded-2xl overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-[#9A9A9A]">
-                  [Team Culture Image]
-                </div>
+              <div className="aspect-[4/3] relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/team-culture.jpg"
+                  alt="Team Culture"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </FadeIn>
             

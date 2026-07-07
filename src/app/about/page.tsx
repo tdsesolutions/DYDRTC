@@ -43,7 +43,7 @@ const leadership = [
   {
     name: "Tamsyn Butler",
     title: "Executive Director",
-    image: "/images/leadership/TamsynButler.jpeg",
+    image: "/images/tamsyn-butler-headshot.png",
     quote: "Every child carries within them the potential for greatness. Our role is to provide the safety, support, and belief they need to discover it.",
     bio: `Tamsyn Butler serves as the Executive Director of Defining Your Destiny Youth Center, bringing more than a decade of distinguished leadership experience in residential child care and mental health services. A Licensed Child Care Administrator (LCCA) in the state of Texas, she holds a Master's degree in Social Work and has dedicated her career to advancing the quality of care for vulnerable youth.
 
@@ -80,23 +80,92 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#17375E] to-[#1F5D3A]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.1),_transparent_50%)]" />
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#17375E] to-[#1F5D3A] overflow-hidden">
+        {/* Slow Gradient Mesh Movement - Full Hero */}
+        <motion.div
+          className="absolute inset-0 opacity-50"
+          animate={{
+            background: [
+              "radial-gradient(circle at 15% 25%, rgba(31,93,58,0.5) 0%, transparent 45%), radial-gradient(circle at 85% 75%, rgba(23,55,94,0.4) 0%, transparent 45%), radial-gradient(circle at 50% 50%, rgba(198,161,91,0.15) 0%, transparent 40%)",
+              "radial-gradient(circle at 25% 35%, rgba(31,93,58,0.45) 0%, transparent 45%), radial-gradient(circle at 75% 65%, rgba(23,55,94,0.45) 0%, transparent 45%), radial-gradient(circle at 45% 55%, rgba(198,161,91,0.12) 0%, transparent 40%)",
+              "radial-gradient(circle at 15% 25%, rgba(31,93,58,0.5) 0%, transparent 45%), radial-gradient(circle at 85% 75%, rgba(23,55,94,0.4) 0%, transparent 45%), radial-gradient(circle at 50% 50%, rgba(198,161,91,0.15) 0%, transparent 40%)",
+            ],
+          }}
+          transition={{
+            duration: 25,
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(198,161,91,0.12),_transparent_50%)]" />
+        {/* Ambient Animated Light - Full Hero */}
+        <motion.div
+          className="absolute inset-0 pointer-events-none"
+          animate={{
+            opacity: [0.2, 0.35, 0.2],
+          }}
+          transition={{
+            duration: 14,
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
+        >
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-[#1F5D3A]/40 via-[#17375E]/25 to-transparent blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-gradient-to-br from-[#17375E]/35 via-[#1F5D3A]/20 to-transparent blur-3xl" />
+        </motion.div>
+
+        {/* Very Subtle Soft Gold Particles - Full Hero */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {[...Array(7)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1.5 h-1.5 rounded-full bg-[#C6A15B]"
+              style={{
+                left: `${15 + i * 12}%`,
+                top: `${25 + (i % 3) * 20}%`,
+              }}
+              animate={{
+                opacity: [0.25, 0.45, 0.25],
+                scale: [1, 1.3, 1],
+              }}
+              transition={{
+                duration: 10 + i * 1.5,
+                ease: "easeInOut",
+                repeat: Infinity,
+                delay: i * 1.2,
+              }}
+            />
+          ))}
+        </div>
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
-          <FadeIn>
-            <div className="max-w-3xl">
-              <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
-                About Us
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-                Empowering young people to shape their own futures.
-              </h1>
-              <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
-                Defining Your Destiny Youth Center was founded on a powerful belief: every young person 
-                has the capacity to heal, grow, and create a meaningful, successful future.
-              </p>
+          <div className="flex items-center justify-between">
+            <FadeIn>
+              <div className="max-w-3xl">
+                <p className="text-[#C6A15B] text-sm font-medium tracking-widest uppercase mb-4">
+                  About Us
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+                  Empowering young people to shape their own futures.
+                </h1>
+                <p className="text-lg lg:text-xl text-white/70 leading-relaxed">
+                  Defining Your Destiny Youth Center was founded on a powerful belief: every young person 
+                  has the capacity to heal, grow, and create a meaningful, successful future.
+                </p>
+              </div>
+            </FadeIn>
+            <div className="hidden lg:flex w-[45%] h-[400px] items-center justify-start relative">
+              <div className="relative w-full h-[600px] -translate-x-12">
+                <Image
+                  src="/images/hero-artwork-about.png"
+                  alt="About Us"
+                  fill
+                  className="object-contain object-center"
+                  priority
+                  sizes="40vw"
+                />
+              </div>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -105,11 +174,14 @@ export default function AboutPage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn direction="left">
-              <div className="aspect-[4/3] bg-gradient-to-br from-[#1F5D3A]/10 to-[#17375E]/10 rounded-2xl overflow-hidden flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Users className="w-16 h-16 text-[#1F5D3A]/30 mx-auto mb-4" />
-                  <p className="text-[#4A4A4A]/50 text-sm">Our Team</p>
-                </div>
+              <div className="aspect-[4/3] relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/our-team.jpg"
+                  alt="Our Team"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </FadeIn>
             
@@ -317,38 +389,39 @@ export default function AboutPage() {
             </div>
           </FadeIn>
 
-          <div className="space-y-16 max-w-5xl mx-auto">
+          <div className="space-y-12">
             {leadership.map((person, index) => (
               <FadeIn key={person.name} delay={index * 0.15}>
-                <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                  <div className="grid lg:grid-cols-3 gap-0">
-                    {/* Image Column */}
-                    <div className="relative bg-[#F5F5F5] flex items-center justify-center p-8 lg:p-0">
-                      <div className="relative w-full max-w-[280px] aspect-[3/4] lg:aspect-[4/5] lg:max-w-none lg:w-full lg:h-full">
+                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+                  <div className="grid lg:grid-cols-12 gap-0">
+                    {/* Image Column - 4 columns on desktop */}
+                    <div className="lg:col-span-4 bg-[#F8F8F8] flex items-start justify-center p-6 lg:p-8">
+                      <div className="relative w-full max-w-[320px] lg:max-w-[360px] aspect-[4/5] rounded-xl overflow-hidden shadow-md">
                         <Image
                           src={person.image}
-                          alt={person.name}
+                          alt={`${person.name} - ${person.title}`}
                           fill
-                          className="object-contain"
-                          sizes="(max-width: 1024px) 280px, 33vw"
+                          className="object-cover object-top"
+                          sizes="(max-width: 1024px) 320px, 360px"
                         />
                       </div>
                     </div>
                     
-                    {/* Content Column */}
-                    <div className="lg:col-span-2 p-8 lg:p-10">
+                    {/* Content Column - 8 columns on desktop */}
+                    <div className="lg:col-span-8 p-6 lg:p-10">
+                      {/* Header */}
                       <div className="mb-6">
-                        <h3 className="font-semibold text-[#17375E] text-2xl mb-1">{person.name}</h3>
-                        <p className="text-[#1F5D3A] font-medium">{person.title}</p>
+                        <h3 className="font-semibold text-[#17375E] text-2xl lg:text-3xl mb-2">{person.name}</h3>
+                        <p className="text-[#1F5D3A] font-medium text-lg">{person.title}</p>
                       </div>
                       
                       {/* Quote */}
-                      <blockquote className="border-l-4 border-[#C6A15B] pl-6 mb-6 italic text-[#4A4A4A] text-lg">
+                      <blockquote className="border-l-4 border-[#C6A15B] pl-5 mb-6 italic text-[#4A4A4A] text-base lg:text-lg leading-relaxed">
                         &ldquo;{person.quote}&rdquo;
                       </blockquote>
                       
                       {/* Bio */}
-                      <div className="text-[#4A4A4A] leading-relaxed space-y-4">
+                      <div className="text-[#4A4A4A] leading-relaxed space-y-4 text-sm lg:text-base">
                         {person.bio.split('\n\n').map((paragraph, i) => (
                           <p key={i}>{paragraph}</p>
                         ))}
