@@ -115,13 +115,6 @@ export default function Home() {
                 className="flex flex-wrap gap-4"
               >
                 <Link
-                  href="/admissions"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-[#1F5D3A] transition-colors"
-                >
-                  Start a Referral
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
                   href="/programs"
                   className="inline-flex items-center gap-2 px-8 py-4 border border-white/40 text-white font-medium rounded-full hover:bg-white/10 transition-colors"
                 >
@@ -378,12 +371,6 @@ export default function Home() {
                 can support your child or client on their journey toward healing and growth.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/admissions"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-white hover:text-[#17375E] transition-colors"
-                >
-                  Start a Referral <ArrowRight className="w-4 h-4" />
-                </Link>
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-medium rounded-full hover:bg-white/10 transition-colors"

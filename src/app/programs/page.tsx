@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Heart, Home, GraduationCap, ChevronRight } from "lucide-react";
+import { Heart, Home, GraduationCap, ChevronRight } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 
 const programs = [
@@ -235,12 +235,6 @@ export default function ProgramsPage() {
                 </p>
                 <div className="space-y-4">
                   <Link
-                    href="/admissions"
-                    className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-white hover:text-[#17375E] transition-colors"
-                  >
-                    Start a Referral <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link
                     href="/contact"
                     className="flex items-center justify-center gap-2 w-full px-6 py-4 border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-colors"
                   >
@@ -265,12 +259,6 @@ export default function ProgramsPage() {
               on their path toward healing, growth, and independence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/admissions"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-white hover:text-[#17375E] transition-colors"
-              >
-                Start a Referral <ArrowRight className="w-4 h-4" />
-              </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-medium rounded-full hover:bg-white/10 transition-colors"

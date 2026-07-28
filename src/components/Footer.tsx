@@ -8,23 +8,16 @@ const footerLinks = {
   main: [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
     { name: "Programs", href: "/programs" },
-    { name: "Admissions", href: "/admissions" },
-    { name: "Resources", href: "/resources" },
+    { name: "Our Campus", href: "/our-campus" },
+    { name: "Donations", href: "/donations" },
     { name: "Careers", href: "/careers" },
-    { name: "Training", href: "/training" },
     { name: "Contact", href: "/contact" },
   ],
   programs: [
     { name: "Residential Treatment", href: "/programs/pmn" },
     { name: "Life Skills Development", href: "/programs/sil" },
     { name: "Transition & Aftercare", href: "/programs/tlp" },
-  ],
-  resources: [
-    { name: "Family FAQs", href: "/resources" },
-    { name: "Referral Information", href: "/resources" },
-    { name: "Downloads", href: "/resources" },
   ],
 };
 
@@ -42,12 +35,6 @@ export default function Footer() {
               Let us help you find the right level of care and support for your family.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link
-                href="/admissions"
-                className="inline-flex items-center px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-[#1F5D3A] transition-colors"
-              >
-                Start a Referral
-              </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 border border-white/30 font-medium rounded-full hover:bg-white/10 transition-colors"
