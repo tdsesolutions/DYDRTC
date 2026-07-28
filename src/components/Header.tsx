@@ -9,7 +9,6 @@ import { Menu, X, ChevronDown } from "lucide-react";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
   {
     name: "Programs",
     href: "/programs",
@@ -19,10 +18,9 @@ const navLinks = [
       { name: "Transition & Aftercare", href: "/programs/tlp" },
     ],
   },
-  { name: "Admissions", href: "/admissions" },
-  { name: "Resources", href: "/resources" },
+  { name: "Our Campus", href: "/our-campus" },
+  { name: "Donations", href: "/donations" },
   { name: "Careers", href: "/careers" },
-  { name: "Training", href: "/training" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -110,20 +108,6 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* CTA Button */}
-            <div className="hidden lg:block">
-              <Link
-                href="/admissions"
-                className={`inline-flex items-center px-6 py-3 text-sm font-medium rounded-full transition-all duration-300 ${
-                  isScrolled
-                    ? "bg-[#1F5D3A] text-white hover:bg-[#17375E]"
-                    : "bg-white text-[#17375E] hover:bg-[#C6A15B] hover:text-white"
-                }`}
-              >
-                Start a Referral
-              </Link>
-            </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -181,21 +165,6 @@ export default function Header() {
                   </motion.div>
                 ))}
               </nav>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="mt-12"
-              >
-                <Link
-                  href="/admissions"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-flex items-center px-8 py-4 text-base font-medium bg-white text-[#17375E] rounded-full hover:bg-[#C6A15B] hover:text-white transition-colors"
-                >
-                  Start a Referral
-                </Link>
-              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0 }}

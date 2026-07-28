@@ -1,0 +1,5 @@
+[build]
+  command = "npm run build"
+  # next.config.mjs sets distDir = "dist", so the static export lands here,
+  # not in Netlify's default "out".
+  publish = "dist"

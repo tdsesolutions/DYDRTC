@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Home, Users, BookOpen, Heart, ChevronDown, ChevronUp } from "lucide-react";
+import { Home, Users, BookOpen, Heart, ChevronDown, ChevronUp } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import { useState } from "react";
 
@@ -369,12 +369,6 @@ export default function LifeSkillsPage() {
               you or your client.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/admissions"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-white hover:text-[#17375E] transition-colors"
-              >
-                Start a Referral <ArrowRight className="w-4 h-4" />
-              </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-medium rounded-full hover:bg-white/10 transition-colors"
