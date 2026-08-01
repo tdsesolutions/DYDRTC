@@ -4,9 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Gift, Heart, HandHeart, Mail, Package } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
+import { useState } from "react";
 
 // TODO: replace with the live giving link once the processor account is set up.
 const DONATE_URL = "[DONATION_URL_PLACEHOLDER]";
+const PRESET_AMOUNTS = [25, 100, 1000];
 
 // TODO: replace with the mailing address for gifts. Use a PO box, not the campus address.
 const MAILING_ADDRESS = ["[PO Box Coming Soon]", "[City, State ZIP]"];
@@ -46,27 +48,33 @@ const wishList = [
 const tiers = [
   {
     name: "Friend",
-    amount: "$100",
     description: "Supplies a young person with school and personal essentials for their stay.",
   },
   {
     name: "Advocate",
-    amount: "$500",
     description: "Underwrites recreational and enrichment activities for a group of residents.",
   },
   {
     name: "Partner",
-    amount: "$1,000",
     description: "Sponsors a full program cycle, including materials and facilitation.",
   },
   {
     name: "Cornerstone",
-    amount: "$5,000",
     description: "A leadership commitment that supports a full season of care and campus needs.",
   },
 ];
 
 export default function DonationsPage() {
+  const [amount, setAmount] = useState("");
+  const [isCustom, setIsCustom] = useState(false);
+
+  // Strip anything that is not a number so a stray character cannot reach the processor.
+  const cleanAmount = amount.replace(/[^0-9.]/g, "").replace(/^0+(?=\d)/, "");
+  // The processor URL is still a placeholder; once it is real this passes the chosen amount through.
+  const donateHref = cleanAmount && Number(cleanAmount) > 0
+    ? `${DONATE_URL}?amount=${encodeURIComponent(cleanAmount)}`
+    : DONATE_URL;
+
   return (
     <>
       {/* Page Hero */}
@@ -145,15 +153,65 @@ export default function DonationsPage() {
                 <h2 className="text-2xl lg:text-3xl font-semibold text-white mb-4">
                   Give Online
                 </h2>
-                <p className="text-white/70 leading-relaxed mb-8 flex-grow">
+                <p className="text-white/70 leading-relaxed mb-8">
                   Make a secure one-time or monthly gift. Monthly giving is the steadiest kind of
                   support there is &mdash; it lets us plan ahead for the young people we serve.
                 </p>
+
+                <div className="flex-grow">
+                  <p className="text-sm font-medium text-white/80 mb-3">Choose an amount</p>
+                  <div className="flex flex-wrap gap-3 mb-4">
+                    {PRESET_AMOUNTS.map((preset) => (
+                      <button
+                        key={preset}
+                        type="button"
+                        onClick={() => { setIsCustom(false); setAmount(String(preset)); }}
+                        className={`px-6 py-3 rounded-full font-medium transition-colors ${
+                          !isCustom && amount === String(preset)
+                            ? "bg-[#C6A15B] text-white"
+                            : "bg-white/10 text-white hover:bg-white/20"
+                        }`}
+                      >
+                        ${preset.toLocaleString()}
+                      </button>
+                    ))}
+                    <button
+                      type="button"
+                      onClick={() => { setIsCustom(true); setAmount(""); }}
+                      className={`px-6 py-3 rounded-full font-medium transition-colors ${
+                        isCustom
+                          ? "bg-[#C6A15B] text-white"
+                          : "bg-white/10 text-white hover:bg-white/20"
+                      }`}
+                    >
+                      Other
+                    </button>
+                  </div>
+
+                  {isCustom && (
+                    <div className="relative">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60">$</span>
+                      <input
+                        type="number"
+                        min="1"
+                        step="1"
+                        inputMode="decimal"
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
+                        placeholder="Enter an amount"
+                        aria-label="Custom donation amount"
+                        className="w-full pl-8 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
+                      />
+                    </div>
+                  )}
+                </div>
+
                 <a
-                  href={DONATE_URL}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-white hover:text-[#17375E] transition-colors"
+                  href={donateHref}
+                  className="mt-8 inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-white hover:text-[#17375E] transition-colors"
                 >
-                  Donate Now <ArrowRight className="w-4 h-4" />
+                  {cleanAmount ? `Donate $${cleanAmount}` : "Donate Now"}
+                  <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </FadeIn>
@@ -253,7 +311,6 @@ export default function DonationsPage() {
               <FadeIn key={tier.name} delay={index * 0.1}>
                 <div className="bg-white rounded-2xl p-8 h-full border-t-4 border-[#C6A15B]">
                   <h3 className="text-xl font-semibold text-[#17375E] mb-2">{tier.name}</h3>
-                  <p className="text-2xl font-semibold text-[#1F5D3A] mb-4">{tier.amount}</p>
                   <p className="text-[#4A4A4A] leading-relaxed">{tier.description}</p>
                 </div>
               </FadeIn>
