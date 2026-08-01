@@ -66,7 +66,6 @@ const tiers = [
 
 export default function DonationsPage() {
   const [amount, setAmount] = useState("");
-  const [isCustom, setIsCustom] = useState(false);
 
   // Strip anything that is not a number so a stray character cannot reach the processor.
   const cleanAmount = amount.replace(/[^0-9.]/g, "").replace(/^0+(?=\d)/, "");
@@ -165,9 +164,9 @@ export default function DonationsPage() {
                       <button
                         key={preset}
                         type="button"
-                        onClick={() => { setIsCustom(false); setAmount(String(preset)); }}
+                        onClick={() => setAmount(String(preset))}
                         className={`px-6 py-3 rounded-full font-medium transition-colors ${
-                          !isCustom && amount === String(preset)
+                          amount === String(preset)
                             ? "bg-[#C6A15B] text-white"
                             : "bg-white/10 text-white hover:bg-white/20"
                         }`}
@@ -175,35 +174,22 @@ export default function DonationsPage() {
                         ${preset.toLocaleString()}
                       </button>
                     ))}
-                    <button
-                      type="button"
-                      onClick={() => { setIsCustom(true); setAmount(""); }}
-                      className={`px-6 py-3 rounded-full font-medium transition-colors ${
-                        isCustom
-                          ? "bg-[#C6A15B] text-white"
-                          : "bg-white/10 text-white hover:bg-white/20"
-                      }`}
-                    >
-                      Other
-                    </button>
                   </div>
 
-                  {isCustom && (
-                    <div className="relative">
-                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60">$</span>
-                      <input
-                        type="number"
-                        min="1"
-                        step="1"
-                        inputMode="decimal"
-                        value={amount}
-                        onChange={(e) => setAmount(e.target.value)}
-                        placeholder="Enter an amount"
-                        aria-label="Custom donation amount"
-                        className="w-full pl-8 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
-                      />
-                    </div>
-                  )}
+                  <div className="relative">
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60">$</span>
+                    <input
+                      type="number"
+                      min="1"
+                      step="1"
+                      inputMode="decimal"
+                      value={amount}
+                      onChange={(e) => setAmount(e.target.value)}
+                      placeholder="Or enter another amount"
+                      aria-label="Donation amount"
+                      className="w-full pl-8 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#C6A15B]"
+                    />
+                  </div>
                 </div>
 
                 <a
@@ -330,34 +316,6 @@ export default function DonationsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-[#1F5D3A]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 text-center">
-          <FadeIn>
-            <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">
-              Every Gift Reaches a Child
-            </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              Thank you for considering a gift to Defining Your Destiny Youth Center. If you have
-              questions about giving, we would be glad to talk with you.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href={DONATE_URL}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C6A15B] text-white font-medium rounded-full hover:bg-white hover:text-[#17375E] transition-colors"
-              >
-                Donate Now <ArrowRight className="w-4 h-4" />
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-medium rounded-full hover:bg-white/10 transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
     </>
   );
 }

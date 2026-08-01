@@ -36,6 +36,10 @@ const benefits = [
     title: "Professional Development",
     desc: "Ongoing training, continuing education support, and career advancement opportunities.",
   },
+  {
+    title: "Benefits Package",
+    desc: "A competitive benefits package. We are glad to walk through the details with you during the interview process.",
+  },
 ];
 
 const pillars = [

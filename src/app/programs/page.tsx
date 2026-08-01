@@ -178,28 +178,6 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-[#1F5D3A]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 text-center">
-          <FadeIn>
-            <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">
-              Begin the Journey Today
-            </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              Contact us to learn more about how our programs can support your child or client 
-              on their path toward healing, growth, and independence.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-medium rounded-full hover:bg-white/10 transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
     </>
   );
 }

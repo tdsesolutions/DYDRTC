@@ -23,7 +23,18 @@ export default function Footer() {
   return (
     <footer className="bg-[#17375E] text-white">
       {/* Main Footer */}
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
+      <div className="relative max-w-[1440px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
+        {/* Centered Footer Logo - Absolute positioned */}
+        <div className="absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+          <Image
+            src="/images/DYDlogo1.png"
+            alt="Defining Your Destiny"
+            width={705}
+            height={926}
+            className="w-[200px] h-auto object-contain opacity-90"
+          />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
@@ -31,13 +42,13 @@ export default function Footer() {
               <Image
                 src="/images/DYDlogo1.png"
                 alt="Defining Your Destiny"
-                width={160}
-                height={40}
-                className="w-[160px] h-auto object-contain"
+                width={705}
+                height={926}
+                className="w-[72px] h-auto object-contain"
               />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Providing trauma-informed residential treatment and supportive services 
+              Providing trauma-informed residential treatment and supportive services
               for children and adolescents with emotional, behavioral, and mental health needs.
             </p>
             <div className="flex gap-4">

@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Heart, Shield, Users, Target, Award } from "lucide-react";
@@ -431,34 +430,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-[#1F5D3A]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 text-center">
-          <FadeIn>
-            <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">
-              Learn More About Our Programs
-            </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              Discover how Defining Your Destiny Youth Center can support your family or client on their journey 
-              toward healing and growth.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/programs"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#17375E] font-medium rounded-full hover:bg-[#C6A15B] hover:text-white transition-colors"
-              >
-                Explore Programs <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-medium rounded-full hover:bg-white/10 transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
     </>
   );
 }
