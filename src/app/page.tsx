@@ -3,29 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronDown, Heart, Shield, Users, BookOpen, Home as HomeIcon, GraduationCap } from "lucide-react";
+import { ArrowRight, ChevronDown, Shield } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
-
-const programs = [
-  {
-    icon: Heart,
-    title: "Residential Treatment",
-    description: "Comprehensive residential care for youth with emotional, behavioral, and mental health needs in a therapeutic environment.",
-    href: "/programs/pmn",
-  },
-  {
-    icon: HomeIcon,
-    title: "Life Skills Development",
-    description: "Structured programming to build essential daily living skills, emotional regulation, and personal responsibility.",
-    href: "/programs/sil",
-  },
-  {
-    icon: GraduationCap,
-    title: "Transition & Aftercare",
-    description: "Comprehensive discharge planning and aftercare support to ensure sustained success after residential treatment.",
-    href: "/programs/tlp",
-  },
-];
 
 const services = [
   {
@@ -163,48 +142,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Programs Section */}
-        <section className="py-24 lg:py-32 bg-[#F5F5F5]">
-          <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-            <FadeIn>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
-                  Programs Designed for Transformation
-                </h2>
-                <p className="text-lg text-[#4A4A4A] max-w-2xl mx-auto">
-                  Integrated programs that meet young people where they are and guide them toward 
-                  healing, independence, and lasting success.
-                </p>
-              </div>
-            </FadeIn>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {programs.map((program, index) => (
-                <FadeIn key={program.title} delay={index * 0.15}>
-                  <Link href={program.href} className="group block">
-                    <div className="bg-white rounded-2xl p-8 lg:p-10 h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                      <div className="w-14 h-14 rounded-xl bg-[#1F5D3A]/10 flex items-center justify-center mb-6 group-hover:bg-[#1F5D3A]/20 transition-colors">
-                        <program.icon className="w-7 h-7 text-[#1F5D3A]" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-[#17375E] mb-3">
-                        {program.title}
-                      </h3>
-                      <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                        {program.description}
-                      </p>
-                      <span className="inline-flex items-center text-[#1F5D3A] font-medium group-hover:gap-2 transition-all">
-                        Learn more <ArrowRight className="w-4 h-4 ml-1" />
-                      </span>
-                    </div>
-                  </Link>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Featured Residential Treatment Section */}
-        <section className="py-24 lg:py-32 bg-white">
+        <section className="py-24 lg:py-32 bg-[#F5F5F5]">
           <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <FadeIn direction="left">
@@ -356,29 +295,6 @@ export default function Home() {
                 </div>
               </FadeIn>
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-[#1F5D3A]">
-          <div className="max-w-[1440px] mx-auto px-6 lg:px-12 text-center">
-            <FadeIn>
-              <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">
-                Ready to Take the First Step?
-              </h2>
-              <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-                Contact our admissions team to learn how Defining Your Destiny Youth Center 
-                can support your child or client on their journey toward healing and growth.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-medium rounded-full hover:bg-white/10 transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </FadeIn>
           </div>
         </section>
       </main>

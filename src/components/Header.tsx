@@ -14,8 +14,6 @@ const navLinks = [
     href: "/programs",
     children: [
       { name: "Residential Treatment", href: "/programs/pmn" },
-      { name: "Life Skills Development", href: "/programs/sil" },
-      { name: "Transition & Aftercare", href: "/programs/tlp" },
     ],
   },
   { name: "Our Campus", href: "/our-campus" },

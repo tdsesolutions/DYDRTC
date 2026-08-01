@@ -16,49 +16,14 @@ const footerLinks = {
   ],
   programs: [
     { name: "Residential Treatment", href: "/programs/pmn" },
-    { name: "Life Skills Development", href: "/programs/sil" },
-    { name: "Transition & Aftercare", href: "/programs/tlp" },
   ],
 };
 
 export default function Footer() {
   return (
     <footer className="bg-[#17375E] text-white">
-      {/* CTA Section */}
-      <div className="border-b border-white/10">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl lg:text-5xl font-semibold leading-tight mb-6">
-              Every young person deserves a place to heal, grow, and thrive.
-            </h2>
-            <p className="text-lg text-white/70 mb-8">
-              Let us help you find the right level of care and support for your family.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 border border-white/30 font-medium rounded-full hover:bg-white/10 transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer */}
-      <div className="relative max-w-[1440px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
-        {/* Centered Footer Logo - Absolute positioned */}
-        <div className="absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-          <Image
-            src="/images/DYDlogo1.png"
-            alt="Defining Your Destiny"
-            width={200}
-            height={50}
-            className="w-[200px] h-auto object-contain opacity-90"
-          />
-        </div>
-
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
@@ -66,9 +31,9 @@ export default function Footer() {
               <Image
                 src="/images/DYDlogo1.png"
                 alt="Defining Your Destiny"
-                width={72}
-                height={18}
-                className="w-[72px] h-auto object-contain"
+                width={160}
+                height={40}
+                className="w-[160px] h-auto object-contain"
               />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">

@@ -25,23 +25,6 @@ const roleCategories = [
       "Activity Coordinators",
     ],
   },
-  {
-    category: "Education & Development",
-    roles: [
-      "Educational Liaisons",
-      "Life Skills Instructors",
-      "Vocational Trainers",
-    ],
-  },
-  {
-    category: "Operations & Administration",
-    roles: [
-      "Administrative Staff",
-      "Human Resources",
-      "Finance & Billing",
-      "Facility Support",
-    ],
-  },
 ];
 
 const benefits = [
@@ -50,17 +33,12 @@ const benefits = [
     desc: "Salary packages commensurate with experience and role responsibilities.",
   },
   {
-    title: "Health & Wellness",
-    desc: "Medical, dental, and vision coverage for eligible employees.",
-  },
-  {
     title: "Professional Development",
     desc: "Ongoing training, continuing education support, and career advancement opportunities.",
   },
-  {
-    title: "Work-Life Balance",
-    desc: "Flexible scheduling options and paid time off for eligible positions.",
-  },
+];
+
+const pillars = [
   {
     title: "Meaningful Work",
     desc: "The opportunity to make a real difference in the lives of young people and families.",
@@ -283,27 +261,42 @@ export default function CareersPage() {
                 <h3 className="text-2xl font-semibold text-[#17375E] mb-6">
                   Workplace Expectations
                 </h3>
-                <p className="text-[#4A4A4A] mb-6">
-                  We maintain high standards for our team members, as the nature of our work 
-                  requires professionalism, reliability, and commitment.
+                <p className="text-[#4A4A4A] leading-relaxed">
+                  We maintain high standards for our team members, as the nature of our work
+                  requires professionalism, reliability, and commitment. In practice that means
+                  keeping appropriate boundaries, showing up consistently, working closely with
+                  colleagues, protecting resident privacy without exception, following every
+                  safety protocol, and staying willing to learn and adapt.
                 </p>
-                <ul className="space-y-4">
-                  {[
-                    { title: "Professionalism", desc: "Maintaining appropriate boundaries and professional conduct" },
-                    { title: "Reliability", desc: "Consistent attendance and punctuality" },
-                    { title: "Teamwork", desc: "Collaboration and communication with colleagues" },
-                    { title: "Confidentiality", desc: "Protecting resident privacy and information" },
-                    { title: "Safety", desc: "Adherence to all safety protocols and procedures" },
-                    { title: "Growth Mindset", desc: "Willingness to learn, adapt, and improve" },
-                  ].map((item) => (
-                    <li key={item.title} className="border-b border-[#E8E8E8] pb-4 last:border-0">
-                      <h4 className="font-semibold text-[#17375E]">{item.title}</h4>
-                      <p className="text-sm text-[#4A4A4A]">{item.desc}</p>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Pillars */}
+      <section className="py-24 lg:py-32 bg-[#17375E]">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-4">
+                Our Pillars
+              </h2>
+              <p className="text-lg text-white/70 max-w-2xl mx-auto">
+                What holds the work up, and what you can expect from the people beside you.
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {pillars.map((pillar, index) => (
+              <FadeIn key={pillar.title} delay={index * 0.1}>
+                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 h-full">
+                  <h3 className="text-xl font-semibold text-white mb-3">{pillar.title}</h3>
+                  <p className="text-white/60 leading-relaxed">{pillar.desc}</p>
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Heart, Home, GraduationCap, ChevronRight } from "lucide-react";
+import { Heart, ChevronRight } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 
 const programs = [
@@ -21,36 +21,6 @@ const programs = [
     ],
     href: "/programs/pmn",
     color: "bg-[#1F5D3A]",
-  },
-  {
-    icon: Home,
-    title: "Life Skills Development",
-    subtitle: "Building Essential Competencies",
-    description: "Structured programming focused on developing daily living skills, emotional regulation, and personal responsibility for successful functioning.",
-    features: [
-      "Daily living skills training",
-      "Emotional regulation support",
-      "Social skills development",
-      "Personal responsibility building",
-      "Community integration",
-    ],
-    href: "/programs/sil",
-    color: "bg-[#17375E]",
-  },
-  {
-    icon: GraduationCap,
-    title: "Transition & Aftercare",
-    subtitle: "Sustained Success Planning",
-    description: "Comprehensive discharge planning and aftercare support to ensure continued progress and successful transition after residential treatment.",
-    features: [
-      "Discharge readiness planning",
-      "Aftercare coordination",
-      "Community resource linkage",
-      "Follow-up support",
-      "Crisis prevention planning",
-    ],
-    href: "/programs/tlp",
-    color: "bg-[#C6A15B]",
   },
 ];
 
@@ -108,45 +78,6 @@ export default function ProgramsPage() {
               </p>
             </div>
           </FadeIn>
-        </div>
-      </section>
-
-      {/* Program Pathway */}
-      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <FadeIn>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
-                The Journey Toward Independence
-              </h2>
-              <p className="text-lg text-[#4A4A4A] max-w-2xl mx-auto">
-                Our programs work together to support transformation, growth, and successful futures.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="relative">
-            {/* Pathway line */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-[#1F5D3A]/20 -translate-y-1/2" />
-            
-            <div className="grid md:grid-cols-3 gap-8 relative">
-              {[
-                { step: "1", title: "Residential Treatment", desc: "Healing and stabilization" },
-                { step: "2", title: "Life Skills Development", desc: "Building competencies" },
-                { step: "3", title: "Transition & Aftercare", desc: "Successful independence" },
-              ].map((item, index) => (
-                <FadeIn key={item.step} delay={index * 0.2}>
-                  <div className="text-center">
-                    <div className="w-16 h-16 rounded-full bg-[#1F5D3A] text-white flex items-center justify-center font-bold text-xl mx-auto mb-4 relative z-10">
-                      {item.step}
-                    </div>
-                    <h3 className="text-xl font-semibold text-[#17375E] mb-2">{item.title}</h3>
-                    <p className="text-[#4A4A4A]">{item.desc}</p>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 

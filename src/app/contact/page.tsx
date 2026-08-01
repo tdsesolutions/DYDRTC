@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Phone, Mail, MapPin, Clock, AlertCircle } from "lucide-react";
+import { ArrowRight, AlertCircle } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import { useState } from "react";
 
@@ -61,68 +60,9 @@ export default function ContactPage() {
       {/* Contact Information */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Contact Info */}
-            <FadeIn>
-              <div>
-                <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-6">
-                  Get in Touch
-                </h2>
-                <p className="text-lg text-[#4A4A4A] leading-relaxed mb-8">
-                  Whether you&apos;re a family seeking information, a professional making a referral, 
-                  or simply have questions about our programs, we&apos;re here to help.
-                </p>
-
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#1F5D3A]/10 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-[#1F5D3A]" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-[#17375E] mb-1">Phone</h3>
-                      <p className="text-[#4A4A4A]">[Phone Number]</p>
-                      <p className="text-sm text-[#4A4A4A]/60">Admissions and general inquiries</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#1F5D3A]/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-[#1F5D3A]" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-[#17375E] mb-1">Email</h3>
-                      <p className="text-[#4A4A4A]">[Email Address]</p>
-                      <p className="text-sm text-[#4A4A4A]/60">General inquiries and information</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#1F5D3A]/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-[#1F5D3A]" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-[#17375E] mb-1">Location</h3>
-                      <p className="text-[#4A4A4A]">[Facility Address]</p>
-                      <p className="text-sm text-[#4A4A4A]/60">[City, State ZIP]</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#1F5D3A]/10 flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-5 h-5 text-[#1F5D3A]" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-[#17375E] mb-1">Hours</h3>
-                      <p className="text-[#4A4A4A]">24/7 Residential Care</p>
-                      <p className="text-sm text-[#4A4A4A]/60">Administrative: Monday-Friday, 8am-5pm</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
+          <div className="max-w-2xl mx-auto">
             {/* Contact Form */}
-            <FadeIn direction="right">
+            <FadeIn>
               <div className="bg-[#F5F5F5] rounded-2xl p-8 lg:p-12">
                 <h3 className="text-2xl font-semibold text-[#17375E] mb-6">
                   Send Us a Message
@@ -242,57 +182,6 @@ export default function ContactPage() {
               </div>
             </FadeIn>
           </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-24 lg:py-32 bg-[#F5F5F5]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <FadeIn>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-[#17375E] mb-4">
-                Our Location
-              </h2>
-              <p className="text-lg text-[#4A4A4A]">
-                [Facility location and directions]
-              </p>
-            </div>
-          </FadeIn>
-
-          <FadeIn>
-            <div className="aspect-video relative rounded-2xl overflow-hidden">
-              <Image
-                src="/images/location-map.jpg"
-                alt="Location Map"
-                fill
-                className="object-cover object-center"
-                sizes="100vw"
-              />
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-[#1F5D3A]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 text-center">
-          <FadeIn>
-            <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">
-              Ready to Take the Next Step?
-            </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              If you&apos;re considering our programs for yourself or someone you care about, 
-              our admissions team is ready to help.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/donations"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-medium rounded-full hover:bg-white/10 transition-colors"
-              >
-                Ways to Give
-              </Link>
-            </div>
-          </FadeIn>
         </div>
       </section>
     </>

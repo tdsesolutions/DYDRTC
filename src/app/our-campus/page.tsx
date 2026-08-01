@@ -174,29 +174,6 @@ export default function OurCampusPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-[#1F5D3A]">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 text-center">
-          <FadeIn>
-            <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">
-              Want to Know More?
-            </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              Our team can walk you through what daily life looks like here and answer any
-              question you have about the environment your child would be joining.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-medium rounded-full hover:bg-white/10 transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
     </>
   );
 }
