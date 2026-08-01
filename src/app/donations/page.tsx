@@ -46,22 +46,22 @@ const wishList = [
 const tiers = [
   {
     name: "Friend",
-    amount: "[Amount]",
+    amount: "$100",
     description: "Supplies a young person with school and personal essentials for their stay.",
   },
   {
     name: "Advocate",
-    amount: "[Amount]",
+    amount: "$500",
     description: "Underwrites recreational and enrichment activities for a group of residents.",
   },
   {
     name: "Partner",
-    amount: "[Amount]",
+    amount: "$1,000",
     description: "Sponsors a full program cycle, including materials and facilitation.",
   },
   {
     name: "Cornerstone",
-    amount: "[Amount]",
+    amount: "$5,000",
     description: "A leadership commitment that supports a full season of care and campus needs.",
   },
 ];
